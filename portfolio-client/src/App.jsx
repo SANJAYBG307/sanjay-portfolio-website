@@ -1,27 +1,28 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/test")
-      .then((response) => response.json())
-      .then((data) => {
-        setMessage(data.message);
-      })
-      .catch((error) => {
-        console.error("Error connecting to backend:", error);
-      });
-  }, []);
-
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>Sanjay B G Portfolio</h1>
+    <BrowserRouter>
+      {/* Navigation bar shown on every page */}
+      <Navbar />
 
-      <p>Testing frontend-backend connection:</p>
-
-      <h2>{message}</h2>
-    </div>
+      {/* Page content */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
