@@ -42,7 +42,7 @@ function Contact() {
   return (
     <div className="page-content">
       <section>
-        <div className="section-head">
+        <div className="section-head reveal-on-scroll">
           <span className="section-kicker">Contact</span>
           <h1 className="section-title">Let us work together</h1>
           <p className="section-subtitle">
@@ -51,28 +51,33 @@ function Contact() {
         </div>
 
         <div className="contact-layout">
-          <aside className="contact-info surface-card">
+          <aside className="contact-info surface-card reveal-on-scroll">
             <h3>Reach Out</h3>
             <p>
               Share your requirement, role details, or collaboration idea. I will respond as soon as possible.
             </p>
             <div className="contact-methods">
-              <a href="mailto:contact@example.com" className="contact-link">
+              <a href="mailto:Sanjaysanju143216@gmail.com" className="contact-link">
                 <span>Email</span>
-                <span>contact@example.com</span>
+                <span>Sanjaysanju143216@gmail.com</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+              <a
+                href="https://www.linkedin.com/in/sanjay-b-g-960181340"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link"
+              >
                 <span>LinkedIn</span>
-                <span>Professional profile</span>
+                <span>sanjay-b-g-960181340</span>
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="contact-link">
-                <span>GitHub</span>
-                <span>Project repository</span>
+              <a href="tel:+917353929664" className="contact-link">
+                <span>Mobile</span>
+                <span>+91 7353929664</span>
               </a>
             </div>
           </aside>
 
-          <form onSubmit={handleSubmit} className="contact-form surface-card">
+          <form onSubmit={handleSubmit} className="contact-form surface-card reveal-on-scroll">
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
               <input

@@ -3,18 +3,36 @@
     "id": 1,
     "title": "Logistics Data Warehouse & Analytics Platform",
     "tools": ["SQL", "ETL", "Tableau"],
-    "description": "Designed a star schema data warehouse to transform shipment data into structured analytics tables. Built ETL workflows and created dashboards analyzing route profitability, truck utilization, and revenue performance."
+    "summary": "End-to-end warehouse and BI implementation for logistics performance reporting.",
+    "description": "Designed a star schema data warehouse to convert raw shipment data into structured analytics tables. Built ETL workflows to extract and transform logistics datasets for reporting, and developed Tableau dashboards for route profitability, truck utilization, and revenue performance.",
+    "highlights": [
+      "Designed a star schema data warehouse for analytics-ready shipment data.",
+      "Built ETL workflows for extraction and transformation of logistics datasets.",
+      "Developed Tableau dashboards for route profitability, truck utilization, and revenue performance."
+    ]
   },
   {
     "id": 2,
     "title": "Freight Transportation SQL Analytics",
     "tools": ["MySQL", "SQL"],
-    "description": "Built a relational database for shipment operations and developed SQL queries to analyze customer contribution and operational cost patterns."
+    "summary": "SQL-driven analysis layer for freight operations and cost-performance insights.",
+    "description": "Built a relational database to analyze shipments, dispatch operations, and vendor payments. Developed SQL queries and transformation views for customer contribution and operational cost analysis, and performed exploratory analysis to identify revenue optimization and logistics efficiency opportunities.",
+    "highlights": [
+      "Built a relational database for shipments, dispatch operations, and vendor payments.",
+      "Developed SQL queries and transformation views for customer and cost analysis.",
+      "Performed exploratory analysis to identify revenue optimization and logistics efficiency opportunities."
+    ]
   },
   {
     "id": 3,
     "title": "Electric Vehicle Market Analysis Dashboard",
     "tools": ["Power BI", "Power Query", "DAX"],
-    "description": "Developed a Power BI dashboard analyzing EV adoption trends across states and manufacturers with interactive visualizations."
+    "summary": "Interactive EV adoption analytics dashboard with robust transformation and DAX modeling.",
+    "description": "Developed a Power BI dashboard analyzing EV adoption trends across states and manufacturers. Cleaned and transformed datasets using Power Query, built DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution, and designed interactive maps, bar charts, and trend lines.",
+    "highlights": [
+      "Developed a Power BI dashboard for EV adoption trends across states and manufacturers.",
+      "Cleaned and transformed data using Power Query for reliable reporting.",
+      "Built DAX measures and interactive visualizations including maps, bar charts, and trend lines."
+    ]
   }
 ]

@@ -1,0 +1,57 @@
+SANJAY B G
+Address: Whitefield, Kadugodi, Bengaluru, Karnataka-560067.
+Email ID: Sanjaysanju143216@gmail.com
+Mobile No: +91 7353929664
+LinkedIn: www.linkedin.com/in/sanjay-b-g-960181340
+
+PROFESSIONAL SUMMARY
+Data Analyst with experience in SQL, Python, Power BI, and Tableau, specializing in transforming operational datasets into actionable business insights. Skilled in data cleaning, ETL pipeline development, exploratory data analysis, and dashboard creation to support data-driven decision making. Experience analyzing logistics and operational datasets to identify trends, optimize routes, and improve revenue visibility.
+
+TECHNICAL SKILLS
+Programming: Python (Pandas, NumPy)
+Databases: SQL, MySQL (Joins, Window Functions, CTEs, Aggregations)
+Visualization: Power BI, Tableau
+Data Analysis: Excel (Pivot Tables, Data Cleaning, Data Validation)
+Data Engineering Concepts: ETL, Data Modeling, Data Warehousing
+Analytics Techniques: Exploratory Data Analysis (EDA), Statistical Analysis, KPI Development
+Tools: Git, GitHub, Linux, Docker
+
+PROFESSIONAL EXPERIENCE
+Graduate Trainee Engineer - Data & Operations Analytics
+Manoj Cargo Carriers
+Jul 2025 - Jan 2026
+- Analyzed logistics operational datasets including shipment bookings, dispatch records, and vendor payments using SQL.
+- Identified route-level revenue trends and shipment volume patterns, helping stakeholders evaluate operational performance.
+- Used Python (Pandas) to clean and transform shipment datasets for analysis of delivery performance and route profitability.
+- Built interactive Power BI and Tableau dashboards visualizing booking volumes, revenue trends, and customer contributions.
+- Supported engineering teams during migration from Django monolithic architecture to microservices, validating datasets to ensure data integrity.
+- Used Git/GitHub in a Linux environment for version control and collaboration.
+
+PROJECTS
+Logistics Data Warehouse & Analytics Platform
+Tools: SQL, ETL, Tableau
+- Designed a star schema data warehouse to convert raw shipment data into structured analytics tables.
+- Built ETL workflows to extract and transform logistics datasets for reporting.
+- Developed Tableau dashboards analyzing route profitability, truck utilization, and revenue performance.
+
+Freight Transportation SQL Analytics
+Tools: MySQL, SQL
+- Built a relational database to analyze shipments, dispatch operations, and vendor payments.
+- Developed SQL queries and transformation views to analyze customer contribution and operational cost patterns.
+- Performed exploratory analysis identifying opportunities for revenue optimization and logistics efficiency improvements.
+
+Electric Vehicle Market Analysis Dashboard
+Tools: Power BI, Power Query, DAX
+- Developed a Power BI dashboard analyzing EV adoption trends across states and manufacturers.
+- Cleaned and transformed datasets using Power Query.
+- Built DAX measures for metrics such as total vehicles, average electric range, and BEV vs PHEV distribution.
+- Designed interactive visualizations including maps, bar charts, and trend lines for policy and market insights.
+
+EDUCATION
+Bachelor of Engineering (EEE)
+MVJ College of Engineering, Bengaluru
+CGPA: 8.05
+2025
+
+ADDITIONAL INFORMATION
+Languages: English, Kannada, Telugu
