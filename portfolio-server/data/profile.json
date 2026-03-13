@@ -1,0 +1,22 @@
+{
+  "name": "Sanjay B G",
+  "role": "Data Analyst",
+  "location": "Bengaluru, Karnataka",
+  "summary": "Data Analyst with experience in SQL, Python, Power BI, and Tableau specializing in transforming operational datasets into actionable insights.",
+  "skills": [
+    "Python (Pandas, NumPy)",
+    "SQL",
+    "MySQL",
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "ETL",
+    "Data Modeling",
+    "Data Warehousing"
+  ],
+  "experience": {
+    "company": "Manoj Cargo Carriers",
+    "role": "Graduate Trainee Engineer — Data & Operations Analytics",
+    "duration": "Jul 2025 – Jan 2026"
+  }
+}

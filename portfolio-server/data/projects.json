@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Logistics Data Warehouse & Analytics Platform",
+    "tools": ["SQL", "ETL", "Tableau"],
+    "description": "Designed a star schema data warehouse to transform shipment data into structured analytics tables. Built ETL workflows and created dashboards analyzing route profitability, truck utilization, and revenue performance."
+  },
+  {
+    "id": 2,
+    "title": "Freight Transportation SQL Analytics",
+    "tools": ["MySQL", "SQL"],
+    "description": "Built a relational database for shipment operations and developed SQL queries to analyze customer contribution and operational cost patterns."
+  },
+  {
+    "id": 3,
+    "title": "Electric Vehicle Market Analysis Dashboard",
+    "tools": ["Power BI", "Power Query", "DAX"],
+    "description": "Developed a Power BI dashboard analyzing EV adoption trends across states and manufacturers with interactive visualizations."
+  }
+]
