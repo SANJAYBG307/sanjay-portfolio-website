@@ -1,16 +1,31 @@
+import { useEffect, useState } from "react";
+import { getProfile } from "../services/api";
+
 function Home() {
+  const [profile, setProfile] = useState(null);
+
+  useEffect(() => {
+    async function loadProfile() {
+      const data = await getProfile();
+      setProfile(data);
+    }
+
+    loadProfile();
+  }, []);
+
+  if (!profile) {
+    return <p>Loading profile...</p>;
+  }
+
   return (
     <div style={{ padding: "40px" }}>
-      <h1>Sanjay B G</h1>
+      <h1>{profile.name}</h1>
 
-      <h2>Data Analyst</h2>
+      <h2>{profile.role}</h2>
 
-      <p>
-        Data Analyst experienced in SQL, Python, Power BI, and Tableau.
-        I transform operational datasets into actionable business insights
-        through data cleaning, ETL pipelines, exploratory data analysis,
-        and dashboard development.
-      </p>
+      <p>{profile.summary}</p>
+
+      <p><strong>Location:</strong> {profile.location}</p>
     </div>
   );
 }

@@ -1,14 +1,26 @@
+import { useEffect, useState } from "react";
+import { getProfile } from "../services/api";
+
 function Skills() {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    async function loadSkills() {
+      const data = await getProfile();
+      setSkills(data.skills);
+    }
+
+    loadSkills();
+  }, []);
+
   return (
     <div style={{ padding: "40px" }}>
       <h1>Skills</h1>
 
       <ul>
-        <li>Python (Pandas, NumPy)</li>
-        <li>SQL and MySQL</li>
-        <li>Power BI and Tableau</li>
-        <li>Excel Data Analysis</li>
-        <li>ETL and Data Modeling</li>
+        {skills.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
       </ul>
     </div>
   );

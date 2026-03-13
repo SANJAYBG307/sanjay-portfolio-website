@@ -1,13 +1,26 @@
+import { useEffect, useState } from "react";
+import { getProjects } from "../services/api";
+import ProjectCard from "../components/ProjectCard";
+
 function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    async function loadProjects() {
+      const data = await getProjects();
+      setProjects(data);
+    }
+
+    loadProjects();
+  }, []);
+
   return (
     <div style={{ padding: "40px" }}>
       <h1>Projects</h1>
 
-      <p>
-        Here you will find analytics projects including
-        logistics data warehouse design, SQL analytics,
-        and Power BI dashboards.
-      </p>
+      {projects.map(project => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
     </div>
   );
 }
