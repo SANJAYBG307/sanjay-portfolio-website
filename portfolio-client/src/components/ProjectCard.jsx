@@ -1,20 +1,18 @@
 function ProjectCard({ project }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        padding: "20px",
-        marginBottom: "20px"
-      }}
-    >
-      <h2>{project.title}</h2>
-
-      <p>{project.description}</p>
-
-      <p>
-        <strong>Tools:</strong> {project.tools.join(", ")}
-      </p>
-    </div>
+    <article className="project-card">
+      <div className="project-content">
+        <h3 className="project-title">{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        <div className="project-tools">
+          {project.tools.map((tool, index) => (
+            <span key={index} className="tool-badge">
+              {tool}
+            </span>
+          ))}
+        </div>
+      </div>
+    </article>
   );
 }
 

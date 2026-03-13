@@ -1,36 +1,44 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <nav style={{ padding: "20px", backgroundColor: "#222" }}>
-      <ul
-        style={{
-          display: "flex",
-          gap: "20px",
-          listStyle: "none",
-          color: "white"
-        }}
-      >
-        <li>
-          <Link to="/" style={{ color: "white" }}>Home</Link>
-        </li>
-
-        <li>
-          <Link to="/about" style={{ color: "white" }}>About</Link>
-        </li>
-
-        <li>
-          <Link to="/projects" style={{ color: "white" }}>Projects</Link>
-        </li>
-
-        <li>
-          <Link to="/skills" style={{ color: "white" }}>Skills</Link>
-        </li>
-
-        <li>
-          <Link to="/contact" style={{ color: "white" }}>Contact</Link>
-        </li>
-      </ul>
+    <nav className="navbar">
+      <div className="navbar-content">
+        <Link to="/" className="navbar-logo">
+          SANJAY B G
+        </Link>
+        <ul className="navbar-menu">
+          <li>
+            <Link to="/" className={`navbar-link ${isActive("/") ? "active" : ""}`}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className={`navbar-link ${isActive("/about") ? "active" : ""}`}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" className={`navbar-link ${isActive("/projects") ? "active" : ""}`}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="/skills" className={`navbar-link ${isActive("/skills") ? "active" : ""}`}>
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={`navbar-link ${isActive("/contact") ? "active" : ""}`}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
