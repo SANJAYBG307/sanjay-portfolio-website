@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
 
 // Fetch profile information
 export async function getProfile() {
@@ -13,17 +13,12 @@ export async function getProjects() {
 }
 
 export async function sendContactMessage(data) {
-
-  const response = await fetch("http://localhost:5000/api/contact", {
-
+  const response = await fetch(`${API_BASE_URL}/contact`, {
     method: "POST",
-
     headers: {
       "Content-Type": "application/json"
     },
-
     body: JSON.stringify(data)
-
   });
 
   return response.json();
