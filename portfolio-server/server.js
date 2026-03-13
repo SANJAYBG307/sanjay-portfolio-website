@@ -11,10 +11,12 @@ const PORT = 5000;
 // Import routes
 const projectsRoute = require("./routes/projects");
 const profileRoute = require("./routes/profile");
+const contactRoute = require("./routes/contact");
 
 // Use routes
 app.use("/api/projects", projectsRoute);
 app.use("/api/profile", profileRoute);
+app.use("/api/contact", contactRoute);
 
 // Test route
 app.get("/api/test", (req, res) => {
