@@ -46,7 +46,7 @@ function Contact() {
           <span className="section-kicker">Contact</span>
           <h1 className="section-title">Let's connect</h1>
           <p className="section-subtitle">
-            Let's connect if you're hiring for Data Analyst roles or looking to solve business problems using data.
+            Open to Data Analyst opportunities in Analytics, BI, and Operations Analytics.
           </p>
         </div>
 

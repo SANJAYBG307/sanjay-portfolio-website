@@ -4,9 +4,9 @@ function About() {
       <section>
         <div className="section-head reveal-on-scroll">
           <span className="section-kicker">About</span>
-          <h1 className="section-title">Data Analyst focused on business impact</h1>
+          <h1 className="section-title">Data Analyst focused on solving business problems</h1>
           <p className="section-subtitle">
-            I turn operational data into clear insights, repeatable reporting systems, and practical actions.
+            I work with operational datasets to identify trends, build reliable dashboards, and deliver insights that drive measurable action.
           </p>
         </div>
 
@@ -30,10 +30,10 @@ function About() {
             <section className="surface-card about-panel reveal-on-scroll">
               <h2 className="skill-section-title">What I Bring</h2>
               <ul className="about-list">
-                <li>Strong SQL-driven analysis for operational and business data.</li>
-                <li>Clean, reliable datasets through ETL and validation.</li>
-                <li>Dashboarding and KPI reporting for leadership visibility.</li>
-                <li>Insight storytelling that connects data to action.</li>
+                <li>Strong SQL-driven analysis for operational and business data</li>
+                <li>Clean, reliable datasets through ETL and validation</li>
+                <li>Dashboarding and KPI reporting for leadership visibility</li>
+                <li>Insight storytelling that connects data to action</li>
               </ul>
             </section>
           </div>
@@ -41,25 +41,24 @@ function About() {
           <article className="about-panel surface-card reveal-on-scroll">
             <h2 className="skill-section-title">Experience</h2>
             <div className="timeline-entry">
-              <h3 className="timeline-role">Graduate Trainee Engineer — Data & Operations Analytics</h3>
+              <h3 className="timeline-role">Graduate Trainee Engineer – Data Analytics & Operations</h3>
               <p className="timeline-meta">Manoj Cargo Carriers | Jul 2025 - Jan 2026 (6 Months)</p>
               <ul className="about-list">
                 <li>
-                  Analyzed logistics operational datasets including shipment bookings, dispatch records, and vendor payments using SQL.
+                  Analyzed 10,000+ shipment, dispatch, and vendor payment records using SQL (MySQL) to identify route-level revenue trends and performance gaps.
                 </li>
                 <li>
-                  Identified route-level revenue trends and shipment volume patterns, helping stakeholders evaluate operational performance.
+                  Cleaned and transformed multi-source operational datasets using Pandas and Excel, improving data reliability for delivery and profitability analysis.
                 </li>
                 <li>
-                  Used Python (Pandas) to clean and transform shipment datasets for analysis of delivery performance and route profitability.
+                  Developed interactive Power BI and Tableau dashboards tracking booking volume, revenue trends, and customer contribution, reducing manual reporting effort.
                 </li>
                 <li>
-                  Built interactive Power BI and Tableau dashboards visualizing booking volumes, revenue trends, and customer contributions.
+                  Performed exploratory data analysis across 50+ transportation routes to identify high- and low-performing lanes, supporting operational planning decisions.
                 </li>
                 <li>
-                  Supported engineering teams during migration from Django monolithic architecture to microservices, validating datasets to ensure data integrity.
+                  Supported data validation during migration from a Django monolith to microservices, ensuring data consistency across multiple services.
                 </li>
-                <li>Used Git/GitHub in a Linux environment for version control and collaboration.</li>
               </ul>
             </div>
           </article>

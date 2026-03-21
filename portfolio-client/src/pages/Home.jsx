@@ -210,16 +210,14 @@ function Home() {
           <div className="hero-layout">
             <div className="hero-content">
               <span className="section-kicker">Data Portfolio</span>
-              <h1 className="hero-title">{profile.name}</h1>
-              <h2 className="hero-subtitle">{profile.headline}</h2>
+              <h1 className="hero-title">{profile.headline || profile.name}</h1>
+              <h2 className="hero-subtitle">{profile.subheadline || profile.role}</h2>
 
               <div className="profile-photo-card mobile-photo-card">
                 <img src="/profile-photo.jpeg" alt="SANJAY B G profile" className="profile-photo" />
               </div>
 
-              <p className="hero-description">{profile.subheadline}</p>
-
-              <p className="hero-description">{profile.shortIntro}</p>
+              <p className="hero-description">{profile.intro || profile.summary}</p>
 
               <div className="hero-meta">
                 <span className="meta-pill">Location: {profile.location}</span>
@@ -231,9 +229,17 @@ function Home() {
                 <Link to="/projects" className="btn btn-primary">
                   View Projects
                 </Link>
-                <button type="button" className="btn btn-secondary" onClick={handleDownloadCv}>
-                  Download CV
-                </button>
+                <a
+                  href="https://drive.google.com/file/d/1ONt8jZE1-7a5akANDpAi0IYNlWHZ_rxb/view?usp=drivesdk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
+                  View Resume
+                </a>
+                <Link to="/contact" className="btn btn-secondary">
+                  Contact Me
+                </Link>
               </div>
             </div>
 

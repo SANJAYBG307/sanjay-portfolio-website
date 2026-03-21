@@ -28,43 +28,34 @@ function Skills() {
   }, {});
 
   const fallbackGroupedSkills = {
-    "Programming and Databases": legacySkills.filter((skill) =>
-      ["Python", "SQL", "MySQL"].some((token) => skill.includes(token))
+    "Data Analytics": legacySkills.filter((skill) =>
+      ["Python", "SQL", "MySQL", "Pandas", "NumPy", "Excel"].some((token) => skill.includes(token))
     ),
-    Visualization: legacySkills.filter((skill) => ["Power BI", "Tableau", "Excel"].some((token) => skill.includes(token))),
-    "Data Engineering Concepts": legacySkills.filter((skill) =>
+    "Visualization & BI": legacySkills.filter((skill) => ["Power BI", "Tableau", "Dashboard"].some((token) => skill.includes(token))),
+    "Data Engineering Foundations": legacySkills.filter((skill) =>
       ["ETL", "Modeling", "Warehousing"].some((token) => skill.includes(token))
+    ),
+    "Tools & Workflow": legacySkills.filter((skill) =>
+      ["Git", "GitHub", "Linux", "Docker"].some((token) => skill.includes(token))
     )
   };
 
   const resolvedSkills = Object.keys(groupedSkills).length ? groupedSkills : fallbackGroupedSkills;
 
   const categoryMeta = {
-    Programming: {
-      icon: "Code",
-      note: "Core programming foundation"
-    },
-    Databases: {
-      icon: "SQL",
-      note: "Querying and data retrieval"
-    },
-    Visualization: {
-      icon: "BI",
-      note: "Dashboarding and stakeholder reporting"
-    },
-    "Data Analysis": {
+    "Data Analytics": {
       icon: "EDA",
-      note: "Analysis and spreadsheet operations"
+      note: "SQL, Python, and data analysis expertise"
     },
-    "Data Engineering Concepts": {
+    "Visualization & BI": {
+      icon: "BI",
+      note: "Dashboarding and storytelling for insights"
+    },
+    "Data Engineering Foundations": {
       icon: "ETL",
-      note: "Pipeline and modeling foundations"
+      note: "Data pipelines and warehousing"
     },
-    "Analytics Techniques": {
-      icon: "KPI",
-      note: "Analytical methods and measurement"
-    },
-    Tools: {
+    "Tools & Workflow": {
       icon: "Tool",
       note: "Development and deployment tooling"
     }

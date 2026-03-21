@@ -4,9 +4,9 @@
     "title": "Northwind Sales Data Warehouse & Analytics",
     "tools": ["SQL", "MySQL", "ETL", "Dimensional Modeling"],
     "summary": "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables.",
-    "description": "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables. Built SQL ETL workflows to extract, clean, and load customer, product, employee, and shipper data. Developed sales and shipment KPIs including revenue, order volume, quantity sold, and average order value. Wrote analytical SQL queries to identify top products, customer patterns, employee performance, and monthly trends.",
+    "description": "Built a comprehensive data warehouse solution for the Northwind dataset, including ETL pipelines for customer, product, employee, and shipper data. Developed KPIs for revenue, order volume, quantity sold, and average order value, with analytical queries for identifying top products, customer patterns, and employee performance.",
     "highlights": [
-      "Designed a star schema warehouse to transform transactional data into analytics-ready fact and dimension tables.",
+      "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables.",
       "Built SQL ETL workflows to extract, clean, and load customer, product, employee, and shipper data.",
       "Developed sales and shipment KPIs including revenue, order volume, quantity sold, and average order value.",
       "Wrote analytical SQL queries to identify top products, customer patterns, employee performance, and monthly trends."
@@ -15,9 +15,9 @@
   {
     "id": 2,
     "title": "Netflix Content Analytics & SQL Insights",
-    "tools": ["SQL", "MySQL 8", "CSV"],
+    "tools": ["SQL", "MySQL 8", "CSV", "Data Quality"],
     "summary": "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
-    "description": "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views. Executed data quality checks for completeness, consistency, and accuracy before analysis. Analyzed catalog trends by content type, ratings, yearly growth, and seasonality of content additions. Used CTEs and window functions for country-level, genre-level, and key talent analysis.",
+    "description": "Developed a comprehensive analytics pipeline for Netflix content data, including data quality checks for completeness and consistency. Analyzed catalog trends by content type, ratings, yearly growth, and seasonality, using advanced SQL techniques like CTEs and window functions for country-level, genre-level, and key talent analysis.",
     "highlights": [
       "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
       "Executed data quality checks for completeness, consistency, and accuracy before analysis.",
@@ -30,7 +30,7 @@
     "title": "Electric Vehicle Adoption Analytics Dashboard",
     "tools": ["Power BI", "Power Query", "DAX"],
     "summary": "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",
-    "description": "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers. Used Power Query to clean and model raw data for reliable reporting. Created DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution. Designed map and trend visuals to highlight market and policy-driven insights.",
+    "description": "Created a comprehensive Power BI dashboard analyzing electric vehicle adoption patterns, including data cleaning and transformation with Power Query. Developed DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution, with interactive map and trend visualizations to highlight market and policy-driven insights.",
     "highlights": [
       "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",
       "Used Power Query to clean and model raw data for reliable reporting.",
