@@ -211,13 +211,15 @@ function Home() {
             <div className="hero-content">
               <span className="section-kicker">Data Portfolio</span>
               <h1 className="hero-title">{profile.name}</h1>
-              <h2 className="hero-subtitle">{profile.role}</h2>
+              <h2 className="hero-subtitle">{profile.headline}</h2>
 
               <div className="profile-photo-card mobile-photo-card">
                 <img src="/profile-photo.jpeg" alt="SANJAY B G profile" className="profile-photo" />
               </div>
 
-              <p className="hero-description">{profile.summary}</p>
+              <p className="hero-description">{profile.subheadline}</p>
+
+              <p className="hero-description">{profile.shortIntro}</p>
 
               <div className="hero-meta">
                 <span className="meta-pill">Location: {profile.location}</span>

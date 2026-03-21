@@ -1,38 +1,41 @@
 [
   {
     "id": 1,
-    "title": "Logistics Data Warehouse & Analytics Platform",
-    "tools": ["SQL", "ETL", "Tableau"],
-    "summary": "End-to-end warehouse and BI implementation for logistics performance reporting.",
-    "description": "Designed a star schema data warehouse to convert raw shipment data into structured analytics tables. Built ETL workflows to extract and transform logistics datasets for reporting, and developed Tableau dashboards for route profitability, truck utilization, and revenue performance.",
+    "title": "Northwind Sales Data Warehouse & Analytics",
+    "tools": ["SQL", "MySQL", "ETL", "Dimensional Modeling"],
+    "summary": "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables.",
+    "description": "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables. Built SQL ETL workflows to extract, clean, and load customer, product, employee, and shipper data. Developed sales and shipment KPIs including revenue, order volume, quantity sold, and average order value. Wrote analytical SQL queries to identify top products, customer patterns, employee performance, and monthly trends.",
     "highlights": [
-      "Designed a star schema data warehouse for analytics-ready shipment data.",
-      "Built ETL workflows for extraction and transformation of logistics datasets.",
-      "Developed Tableau dashboards for route profitability, truck utilization, and revenue performance."
+      "Designed a star schema warehouse to transform transactional data into analytics-ready fact and dimension tables.",
+      "Built SQL ETL workflows to extract, clean, and load customer, product, employee, and shipper data.",
+      "Developed sales and shipment KPIs including revenue, order volume, quantity sold, and average order value.",
+      "Wrote analytical SQL queries to identify top products, customer patterns, employee performance, and monthly trends."
     ]
   },
   {
     "id": 2,
-    "title": "Freight Transportation SQL Analytics",
-    "tools": ["MySQL", "SQL"],
-    "summary": "SQL-driven analysis layer for freight operations and cost-performance insights.",
-    "description": "Built a relational database to analyze shipments, dispatch operations, and vendor payments. Developed SQL queries and transformation views for customer contribution and operational cost analysis, and performed exploratory analysis to identify revenue optimization and logistics efficiency opportunities.",
+    "title": "Netflix Content Analytics & SQL Insights",
+    "tools": ["SQL", "MySQL 8", "CSV"],
+    "summary": "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
+    "description": "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views. Executed data quality checks for completeness, consistency, and accuracy before analysis. Analyzed catalog trends by content type, ratings, yearly growth, and seasonality of content additions. Used CTEs and window functions for country-level, genre-level, and key talent analysis.",
     "highlights": [
-      "Built a relational database for shipments, dispatch operations, and vendor payments.",
-      "Developed SQL queries and transformation views for customer and cost analysis.",
-      "Performed exploratory analysis to identify revenue optimization and logistics efficiency opportunities."
+      "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
+      "Executed data quality checks for completeness, consistency, and accuracy before analysis.",
+      "Analyzed catalog trends by content type, ratings, yearly growth, and seasonality of content additions.",
+      "Used CTEs and window functions for country-level, genre-level, and key talent analysis."
     ]
   },
   {
     "id": 3,
-    "title": "Electric Vehicle Market Analysis Dashboard",
+    "title": "Electric Vehicle Adoption Analytics Dashboard",
     "tools": ["Power BI", "Power Query", "DAX"],
-    "summary": "Interactive EV adoption analytics dashboard with robust transformation and DAX modeling.",
-    "description": "Developed a Power BI dashboard analyzing EV adoption trends across states and manufacturers. Cleaned and transformed datasets using Power Query, built DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution, and designed interactive maps, bar charts, and trend lines.",
+    "summary": "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",
+    "description": "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers. Used Power Query to clean and model raw data for reliable reporting. Created DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution. Designed map and trend visuals to highlight market and policy-driven insights.",
     "highlights": [
-      "Developed a Power BI dashboard for EV adoption trends across states and manufacturers.",
-      "Cleaned and transformed data using Power Query for reliable reporting.",
-      "Built DAX measures and interactive visualizations including maps, bar charts, and trend lines."
+      "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",
+      "Used Power Query to clean and model raw data for reliable reporting.",
+      "Created DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution.",
+      "Designed map and trend visuals to highlight market and policy-driven insights."
     ]
   }
 ]

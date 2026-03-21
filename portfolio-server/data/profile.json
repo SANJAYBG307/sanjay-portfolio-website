@@ -1,45 +1,49 @@
 {
   "name": "SANJAY B G",
-  "role": "Data Analyst",
-  "location": "Whitefield, Kadugodi, Bengaluru",
-  "summary": "Data Analyst with experience in SQL, Python, Power BI, and Tableau specializing in transforming operational datasets into actionable insights.",
+  "role": "Data Analyst Turning Operational Data into Business Decisions",
+  "location": "Bengaluru, Karnataka",
+  "summary": "I work with SQL, Python, Power BI, and Tableau to clean complex data, uncover trends, and build dashboards that drive measurable action.",
+  "headline": "Data Analyst Turning Operational Data into Business Decisions",
+  "subheadline": "I work with SQL, Python, Power BI, and Tableau to clean complex data, uncover trends, and build dashboards that drive measurable action.",
+  "shortIntro": "I'm Sanjay B G, a Data Analyst with hands-on experience in logistics and business analytics. I specialize in converting raw data into clear insights through ETL, exploratory analysis, KPI tracking, and data storytelling.",
+  "aboutSection": "I am a Data Analyst focused on solving real business problems using data. During my experience at Manoj Cargo Carriers, I worked on shipment booking, dispatch, and vendor payment datasets to identify route-level revenue patterns and operational gaps.\n\nMy core strength is end-to-end analytics: from data cleaning and transformation to dashboard development and insight communication. I have worked with SQL (MySQL), Python (Pandas), Excel, Power BI, and Tableau to build analytics workflows that help teams make better decisions.\n\nI also collaborated with engineering teams during a Django monolith-to-microservices migration, supporting dataset validation and data consistency across services. This gave me strong cross-functional exposure to both analytics and product environments.",
+  "whatIBring": [
+    "Strong SQL-driven analysis for operational and business data",
+    "Clean, reliable datasets through ETL and validation",
+    "Dashboarding and KPI reporting for leadership visibility",
+    "Insight storytelling that connects data to action"
+  ],
   "skills": [
-    "Python (Pandas, NumPy)",
-    "SQL",
-    "MySQL",
-    "Power BI",
-    "Tableau",
-    "Excel",
-    "ETL",
-    "Data Modeling",
-    "Data Warehousing"
+    "SQL, MySQL, Python, Pandas, NumPy, Excel, Exploratory Data Analysis",
+    "Power BI, Tableau, Dashboard Development, KPI Reporting, Data Storytelling",
+    "ETL, Data Cleaning, Data Transformation, Data Warehousing, Star Schema Modeling",
+    "Git, GitHub, Linux, Docker"
   ],
   "technicalSkills": {
-    "Programming": [
-      "Python (Pandas, NumPy)"
-    ],
-    "Databases": [
+    "Data Analytics": [
       "SQL",
-      "MySQL (Joins, Window Functions, CTEs, Aggregations)"
+      "MySQL",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Excel",
+      "Exploratory Data Analysis"
     ],
-    "Visualization": [
+    "Visualization & BI": [
       "Power BI",
-      "Tableau"
+      "Tableau",
+      "Dashboard Development",
+      "KPI Reporting",
+      "Data Storytelling"
     ],
-    "Data Analysis": [
-      "Excel (Pivot Tables, Data Cleaning, Data Validation)"
-    ],
-    "Data Engineering Concepts": [
+    "Data Engineering Foundations": [
       "ETL",
-      "Data Modeling",
-      "Data Warehousing"
+      "Data Cleaning",
+      "Data Transformation",
+      "Data Warehousing",
+      "Star Schema Modeling"
     ],
-    "Analytics Techniques": [
-      "Exploratory Data Analysis (EDA)",
-      "Statistical Analysis",
-      "KPI Development"
-    ],
-    "Tools": [
+    "Tools & Workflow": [
       "Git",
       "GitHub",
       "Linux",
@@ -50,5 +54,11 @@
     "company": "Manoj Cargo Carriers",
     "role": "Graduate Trainee Engineer — Data & Operations Analytics",
     "duration": "Jul 2025 – Jan 2026"
+  },
+  "contact": {
+    "email": "sanjaysanju143216@gmail.com",
+    "phone": "+91 7353929664",
+    "linkedin": "linkedin.com/in/sanjay-b-g-960181340",
+    "openToOpportunities": "Open to Data Analyst opportunities in Analytics, BI, and Operations Analytics"
   }
 }

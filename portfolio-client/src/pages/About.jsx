@@ -15,28 +15,25 @@ function About() {
             <article className="about-panel surface-card reveal-on-scroll">
               <h2 className="skill-section-title">My Story</h2>
               <p>
-                I am a Data Analyst with hands-on experience transforming complex operational datasets into strategic
-                insights. My expertise lies in building scalable analytics solutions that drive business decisions and
-                optimize performance.
+                I am a Data Analyst focused on solving real business problems using data. During my experience at Manoj Cargo Carriers, I worked on shipment booking, dispatch, and vendor payment datasets to identify route-level revenue patterns and operational gaps.
               </p>
 
               <p>
-                With a strong foundation in SQL, Python, and leading BI tools, I design data warehouses, build ETL
-                processes, and create interactive dashboards that help teams move quickly and confidently.
+                My core strength is end-to-end analytics: from data cleaning and transformation to dashboard development and insight communication. I have worked with SQL (MySQL), Python (Pandas), Excel, Power BI, and Tableau to build analytics workflows that help teams make better decisions.
               </p>
 
               <p>
-                I care deeply about data quality, clarity in communication, and building analytics products that are
-                useful in daily operations.
+                I also collaborated with engineering teams during a Django monolith-to-microservices migration, supporting dataset validation and data consistency across services. This gave me strong cross-functional exposure to both analytics and product environments.
               </p>
             </article>
 
             <section className="surface-card about-panel reveal-on-scroll">
-              <h2 className="skill-section-title">What Drives Me</h2>
+              <h2 className="skill-section-title">What I Bring</h2>
               <ul className="about-list">
-                <li>Solving operational and strategic problems through data.</li>
-                <li>Building analytics workflows that teams can trust and reuse.</li>
-                <li>Continuous learning in modern BI and data engineering practices.</li>
+                <li>Strong SQL-driven analysis for operational and business data.</li>
+                <li>Clean, reliable datasets through ETL and validation.</li>
+                <li>Dashboarding and KPI reporting for leadership visibility.</li>
+                <li>Insight storytelling that connects data to action.</li>
               </ul>
             </section>
           </div>
@@ -44,28 +41,23 @@ function About() {
           <article className="about-panel surface-card reveal-on-scroll">
             <h2 className="skill-section-title">Experience</h2>
             <div className="timeline-entry">
-              <h3 className="timeline-role">Graduate Trainee Engineer Intern</h3>
+              <h3 className="timeline-role">Graduate Trainee Engineer — Data & Operations Analytics</h3>
               <p className="timeline-meta">Manoj Cargo Carriers | Jul 2025 - Jan 2026 (6 Months)</p>
               <ul className="about-list">
                 <li>
-                  Analyzed logistics operational datasets including shipment bookings, dispatch records, and vendor
-                  payments using SQL.
+                  Analyzed logistics operational datasets including shipment bookings, dispatch records, and vendor payments using SQL.
                 </li>
                 <li>
-                  Identified route-level revenue trends and shipment volume patterns, helping stakeholders evaluate
-                  operational performance.
+                  Identified route-level revenue trends and shipment volume patterns, helping stakeholders evaluate operational performance.
                 </li>
                 <li>
-                  Used Python (Pandas) to clean and transform shipment datasets for analysis of delivery performance
-                  and route profitability.
+                  Used Python (Pandas) to clean and transform shipment datasets for analysis of delivery performance and route profitability.
                 </li>
                 <li>
-                  Built interactive Power BI and Tableau dashboards visualizing booking volumes, revenue trends, and
-                  customer contributions.
+                  Built interactive Power BI and Tableau dashboards visualizing booking volumes, revenue trends, and customer contributions.
                 </li>
                 <li>
-                  Supported engineering teams during migration from Django monolithic architecture to microservices,
-                  validating datasets to ensure data integrity.
+                  Supported engineering teams during migration from Django monolithic architecture to microservices, validating datasets to ensure data integrity.
                 </li>
                 <li>Used Git/GitHub in a Linux environment for version control and collaboration.</li>
               </ul>

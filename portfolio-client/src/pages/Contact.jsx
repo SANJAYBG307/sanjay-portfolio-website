@@ -44,9 +44,9 @@ function Contact() {
       <section>
         <div className="section-head reveal-on-scroll">
           <span className="section-kicker">Contact</span>
-          <h1 className="section-title">Let us work together</h1>
+          <h1 className="section-title">Let's connect</h1>
           <p className="section-subtitle">
-            Open to analyst roles, data projects, and opportunities where business outcomes matter.
+            Let's connect if you're hiring for Data Analyst roles or looking to solve business problems using data.
           </p>
         </div>
 
