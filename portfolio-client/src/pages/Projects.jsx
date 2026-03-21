@@ -87,23 +87,59 @@ function Projects() {
                 Close
               </button>
 
-              <p className="section-kicker">Project Spotlight</p>
-              <h2 className="section-title modal-title">{activeProject.title}</h2>
+              <div className="readme-container">
+                <h1 className="readme-title">{activeProject.title}</h1>
 
-              <h3 className="modal-subtitle">Key Highlights</h3>
-              <ul className="project-highlights modal-highlights">
-                {(activeProject.highlights || [activeProject.description]).map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+                {activeProject.readme?.overview && (
+                  <section className="readme-section">
+                    <p className="readme-description">{activeProject.readme.overview}</p>
+                  </section>
+                )}
 
-              <h3 className="modal-subtitle">Tools and Technologies</h3>
-              <div className="project-tools">
-                {activeProject.tools.map((tool) => (
-                  <span key={tool} className="tool-badge">
-                    {tool}
-                  </span>
-                ))}
+                {activeProject.readme?.problem && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">🎯 Problem Statement</h2>
+                    <p className="readme-text">{activeProject.readme.problem}</p>
+                  </section>
+                )}
+
+                {activeProject.readme?.approach && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">🔧 Approach & Methodology</h2>
+                    <p className="readme-text">{activeProject.readme.approach}</p>
+                  </section>
+                )}
+
+                {activeProject.readme?.keyInsights && activeProject.readme.keyInsights.length > 0 && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">💡 Key Insights & Findings</h2>
+                    <ul className="readme-list">
+                      {activeProject.readme.keyInsights.map((insight) => (
+                        <li key={insight} className="readme-list-item">
+                          {insight}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {activeProject.readme?.impact && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">📊 Impact & Results</h2>
+                    <p className="readme-text">{activeProject.readme.impact}</p>
+                  </section>
+                )}
+
+                <section className="readme-section">
+                  <h2 className="readme-heading">🛠️ Technologies & Tools</h2>
+                  <div className="readme-tools">
+                    {(activeProject.readme?.technologiesUsed || activeProject.tools).map((tech) => (
+                      <span key={tech} className="tech-badge">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </section>
               </div>
             </article>
           </div>

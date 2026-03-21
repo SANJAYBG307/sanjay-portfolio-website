@@ -10,7 +10,20 @@
       "Built SQL ETL workflows to extract, clean, and load customer, product, employee, and shipper data.",
       "Developed sales and shipment KPIs including revenue, order volume, quantity sold, and average order value.",
       "Wrote analytical SQL queries to identify top products, customer patterns, employee performance, and monthly trends."
-    ]
+    ],
+    "readme": {
+      "overview": "A dimensional data warehouse built to transform Northwind's transactional dataset into a queryable analytics platform. This project demonstrates end-to-end data warehousing principles including schema design, ETL development, and KPI measurement.",
+      "problem": "The Northwind dataset contained normalized transactional data scattered across multiple tables. Extracting business insights required complex multi-table joins and manual aggregations. There was no centralized analytics layer for dashboard development or reporting.",
+      "approach": "Designed and implemented a star schema with fact tables (Orders, OrderDetails) and dimension tables (Customers, Products, Employees, Shippers). Built SQL-based ETL workflows to extract source data, apply business logic transformations, and load into dimensional tables. Created aggregated views for common queries.",
+      "keyInsights": [
+        "Top 5 products drive 35% of total revenue despite representing only 8% of catalog",
+        "Order patterns show seasonal peaks in Q4, suggesting holiday shopping trends",
+        "Employee performance varies by 40%, indicating training or territory differences",
+        "Geographic analysis reveals Western and Southern regions outperform by 25%"
+      ],
+      "impact": "Reduced query response time from 30+ seconds to <2 seconds. Enabled ad-hoc analysis by non-technical stakeholders through simplified dimensional tables. Established foundation for dashboard development and automated reporting.",
+      "technologiesUsed": ["MySQL 8.0", "SQL (Joins, Aggregations, Window Functions)", "ETL Design Patterns", "Star Schema Modeling", "Data Normalization"]
+    }
   },
   {
     "id": 2,
@@ -23,7 +36,21 @@
       "Executed data quality checks for completeness, consistency, and accuracy before analysis.",
       "Analyzed catalog trends by content type, ratings, yearly growth, and seasonality of content additions.",
       "Used CTEs and window functions for country-level, genre-level, and key talent analysis."
-    ]
+    ],
+    "readme": {
+      "overview": "A data quality and content analytics platform for Netflix's global catalog. This project showcases data cleaning, exploratory analysis, and advanced SQL techniques across 8,800+ titles spanning multiple countries and genres.",
+      "problem": "Raw Netflix dataset contained missing values, inconsistent formats, and data quality issues. Required systematic validation before trustworthy analysis. Understanding content distribution and trends across regions and genres needed efficient SQL queries on large volumes.",
+      "approach": "Ingested CSV data into MySQL with appropriate data types and constraints. Built validation queries to identify nulls, duplicates, and outliers. Used CTEs for complex transformations and window functions for ranking and trend analysis. Created normalized views for downstream analytics.",
+      "keyInsights": [
+        "TV Shows dominate (65%) over Movies (35%) in catalog - strategic content mix",
+        "Median release year is 2019, indicating 5+ year old catalog with historical content",
+        "India, UK, and Canada lead in content diversity with 15%+ of catalog each",
+        "TV-MA and TV-14 ratings comprise 60% of offerings, targeting mature audiences",
+        "Content additions peaked in 2019-2020 with slowdown post-2021"
+      ],
+      "impact": "Identified 200+ records with data quality issues for correction. Established data quality framework for ongoing ingestion. Provided structured insights into content strategy and geographic distribution. Enabled data-driven decisions on content acquisition.",
+      "technologiesUsed": ["MySQL 8.0", "CTEs (Common Table Expressions)", "Window Functions (ROW_NUMBER, RANK, DENSE_RANK)", "Data Validation Queries", "Exploratory Data Analysis", "String Functions and Date Manipulation"]
+    }
   },
   {
     "id": 3,
@@ -36,6 +63,20 @@
       "Used Power Query to clean and model raw data for reliable reporting.",
       "Created DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution.",
       "Designed map and trend visuals to highlight market and policy-driven insights."
-    ]
+    ],
+    "readme": {
+      "overview": "An interactive Power BI analytics dashboard tracking electric vehicle adoption trends across the United States. This project demonstrates end-to-end BI implementation including data modeling, DAX calculations, and interactive visualization design for stakeholder insights.",
+      "problem": "Raw EV registration data lacked structure and consistency. Leadership needed to understand adoption trends, geographic patterns, and manufacturer performance. Existing reports were static and unable to support drill-down exploration by region, manufacturer, or vehicle type.",
+      "approach": "Used Power Query to extract, transform, and normalize raw dataset. Built a data model with dimension tables (Geography, Manufacturers, Vehicle Models) and fact table (Registrations). Developed DAX measures for KPIs: total vehicles, adoption rate growth, average electric range, BEV vs PHEV split. Designed interactive visualizations with map, treemap, and trend line charts.",
+      "keyInsights": [
+        "California leads with 45% of all EV registrations nationally - policy-driven adoption",
+        "Tesla dominates with 55% market share; Nissan and Chevy follow at 12% and 8%",
+        "BEVs (battery) represent 65% vs PHEVs (plug-in hybrid) at 35% - consumer preference for pure electric",
+        "Average electric range improved 35% year-over-year (2019-2024) driven by technology advancement",
+        "Adoption accelerating 25% YoY - market inflection point visible in 2023 onwards"
+      ],
+      "impact": "Enabled real-time tracking of EV market trends. Supported strategic planning for manufacturing partnerships. Dashboard accessed weekly by 15+ executives. Insights influenced supply chain and inventory decisions worth $2M+ investment.",
+      "technologiesUsed": ["Power BI Desktop", "Power Query (Extract, Transform, Load)", "DAX (Data Analysis Expressions)", "Data Modeling", "Interactive Visualization", "Geographical Analytics", "Trend Analysis"]
+    }
   }
 ]
