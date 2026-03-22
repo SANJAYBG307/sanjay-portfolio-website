@@ -110,7 +110,66 @@ function Projects() {
                   </section>
                 )}
 
-                {activeProject.readme?.keyInsights && activeProject.readme.keyInsights.length > 0 && (
+                {activeProject.readme?.businessMetrics && activeProject.readme.businessMetrics.length > 0 && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">📊 Key Business Metrics</h2>
+                    <div className="readme-metric-grid">
+                      {activeProject.readme.businessMetrics.map((metric) => (
+                        <article key={metric.label} className="readme-metric-card">
+                          <p className="readme-metric-label">{metric.label}</p>
+                          <p className="readme-metric-value">{metric.value}</p>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {activeProject.readme?.topPerformers && activeProject.readme.topPerformers.length > 0 && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">🏆 Top Performers</h2>
+                    <div className="readme-performer-groups">
+                      {activeProject.readme.topPerformers.map((group) => (
+                        <article key={group.category} className="readme-performer-group">
+                          <h3 className="readme-subheading">{group.category}</h3>
+                          <ul className="readme-list">
+                            {group.items.map((item) => (
+                              <li key={item} className="readme-list-item">
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {activeProject.readme?.salesTrend && activeProject.readme.salesTrend.length > 0 && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">📈 Sales Trend Over Time</h2>
+                    <ul className="readme-list">
+                      {activeProject.readme.salesTrend.map((trendPoint) => (
+                        <li key={trendPoint} className="readme-list-item">
+                          {trendPoint}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {activeProject.readme?.bottomLine && (
+                  <section className="readme-section">
+                    <h2 className="readme-heading">✅ Bottom Line</h2>
+                    <p className="readme-text">{activeProject.readme.bottomLine}</p>
+                  </section>
+                )}
+
+                {activeProject.readme?.keyInsights &&
+                  activeProject.readme.keyInsights.length > 0 &&
+                  !activeProject.readme?.businessMetrics &&
+                  !activeProject.readme?.topPerformers &&
+                  !activeProject.readme?.salesTrend &&
+                  !activeProject.readme?.bottomLine && (
                   <section className="readme-section">
                     <h2 className="readme-heading">💡 Key Insights & Findings</h2>
                     <ul className="readme-list">

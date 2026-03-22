@@ -785,6 +785,54 @@
   margin-bottom: 0.5rem;
 }
 
+.readme-subheading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f3f66;
+  margin: 0 0 0.55rem;
+}
+
+.readme-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.7rem;
+}
+
+.readme-metric-card {
+  border: 1px solid #d8e2f0;
+  background: linear-gradient(150deg, #ffffff 0%, #f4f8ff 100%);
+  border-radius: 10px;
+  padding: 0.72rem;
+}
+
+.readme-metric-label {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #557295;
+  font-weight: 700;
+}
+
+.readme-metric-value {
+  margin: 0.34rem 0 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #1a3458;
+}
+
+.readme-performer-groups {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.readme-performer-group {
+  border: 1px solid #e1e8f4;
+  border-radius: 10px;
+  padding: 0.72rem 0.82rem;
+  background: #fbfdff;
+}
+
 .readme-list {
   list-style: none;
   padding: 0;

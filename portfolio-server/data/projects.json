@@ -3,26 +3,85 @@
     "id": 1,
     "title": "Northwind Sales Data Warehouse & Analytics",
     "tools": ["SQL", "MySQL", "ETL", "Dimensional Modeling"],
-    "summary": "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables.",
-    "description": "Built a comprehensive data warehouse solution for the Northwind dataset, including ETL pipelines for customer, product, employee, and shipper data. Developed KPIs for revenue, order volume, quantity sold, and average order value, with analytical queries for identifying top products, customer patterns, and employee performance.",
+    "summary": "Transformed raw Northwind transactional data into an analytics-ready star schema warehouse using SQL ETL pipelines for KPI reporting and business insights.",
+    "description": "Built a dimensional data warehouse on Northwind using SQL and MySQL. Implemented extraction, cleaning, standardization, and loading pipelines to populate fact and dimension tables, then developed KPI and business analysis queries for products, customers, employees, shipping, and sales trends.",
     "highlights": [
-      "Designed a star schema warehouse to transform transactional Northwind data into analytics-ready fact and dimension tables.",
-      "Built SQL ETL workflows to extract, clean, and load customer, product, employee, and shipper data.",
-      "Developed sales and shipment KPIs including revenue, order volume, quantity sold, and average order value.",
-      "Wrote analytical SQL queries to identify top products, customer patterns, employee performance, and monthly trends."
+      "Implemented a star schema with fact_sales and dimensions for customers, products, orders, and date.",
+      "Developed SQL ETL workflows to extract, clean, standardize, and load transactional data into the warehouse.",
+      "Computed core business KPIs: total orders, products sold, revenue, average order value, and shipment count."
     ],
     "readme": {
-      "overview": "A dimensional data warehouse built to transform Northwind's transactional dataset into a queryable analytics platform. This project demonstrates end-to-end data warehousing principles including schema design, ETL development, and KPI measurement.",
-      "problem": "The Northwind dataset contained normalized transactional data scattered across multiple tables. Extracting business insights required complex multi-table joins and manual aggregations. There was no centralized analytics layer for dashboard development or reporting.",
-      "approach": "Designed and implemented a star schema with fact tables (Orders, OrderDetails) and dimension tables (Customers, Products, Employees, Shippers). Built SQL-based ETL workflows to extract source data, apply business logic transformations, and load into dimensional tables. Created aggregated views for common queries.",
-      "keyInsights": [
-        "Top 5 products drive 35% of total revenue despite representing only 8% of catalog",
-        "Order patterns show seasonal peaks in Q4, suggesting holiday shopping trends",
-        "Employee performance varies by 40%, indicating training or territory differences",
-        "Geographic analysis reveals Western and Southern regions outperform by 25%"
+      "overview": "This project transforms raw transactional Northwind data into a structured, analytics-ready data warehouse using dimensional modeling and SQL-based ETL pipelines. The solution is designed for efficient reporting, business insight generation, and data-driven decision-making.",
+      "problem": "The source Northwind OLTP model is highly normalized and optimized for transactions, not analytics. Business reporting required repeated complex joins, inconsistent calculations, and manual metric preparation, making decision-making slow and difficult to scale.",
+      "approach": "Implemented a star schema with fact_sales and dimensions dim_customers, dim_products, dim_orders, and dim_date. Built SQL ETL pipelines to extract source data, clean inconsistencies, handle null values, standardize formats, and load warehouse tables while preserving data integrity and consistency.",
+      "businessMetrics": [
+        { "label": "Total Orders", "value": "830" },
+        { "label": "Total Products Sold", "value": "51,317 units" },
+        { "label": "Total Revenue", "value": "$1,265,792.93" },
+        { "label": "Average Order Value", "value": "$1,525.05" },
+        { "label": "Total Shipments", "value": "2,155 shipment lines" }
       ],
-      "impact": "Reduced query response time from 30+ seconds to <2 seconds. Enabled ad-hoc analysis by non-technical stakeholders through simplified dimensional tables. Established foundation for dashboard development and automated reporting.",
-      "technologiesUsed": ["MySQL 8.0", "SQL (Joins, Aggregations, Window Functions)", "ETL Design Patterns", "Star Schema Modeling", "Data Normalization"]
+      "topPerformers": [
+        {
+          "category": "Best Selling Products",
+          "items": [
+            "Cote de Blaye (Beverage) - $141,396.73",
+            "Thuringer Rostbratwurst (Meat) - $80,368.69",
+            "Raclette Courdavault (Dairy) - $71,155.70",
+            "Tarte au sucre (Confections) - $47,234.97",
+            "Camembert Pierrot (Dairy) - $46,825.48"
+          ]
+        },
+        {
+          "category": "Best Customers",
+          "items": [
+            "Save-a-lot Markets (USA) - 31 orders, $104,361.94",
+            "Ernst Handel (Austria) - 30 orders, $104,874.97",
+            "QUICK-Stop (Germany) - 28 orders, $110,277.30",
+            "Hungry Owl All-Night Grocers (Ireland) - 19 orders, $49,979.91",
+            "Folk och fa HB (Sweden) - 19 orders, $29,567.56"
+          ]
+        },
+        {
+          "category": "Top Performing Employees",
+          "items": [
+            "Margaret Peacock (Sales Rep) - 156 orders, $232,890.85",
+            "Janet Leverling (Sales Rep) - 127 orders, $202,812.84",
+            "Nancy Davolio (Sales Rep) - 123 orders, $192,107.56",
+            "Andrew Fuller (VP Sales) - 96 orders, $166,537.75",
+            "Laura Callahan (Sales Coordinator) - 104 orders, $126,862.28"
+          ]
+        },
+        {
+          "category": "Shipping Companies",
+          "items": [
+            "United Package - 326 orders, $533,547.60",
+            "Federal Shipping - 255 orders, $383,405.43",
+            "Speedy Express - 249 orders, $348,839.90"
+          ]
+        }
+      ],
+      "salesTrend": [
+        "Started in Aug 1994 with about 22-26 orders per month",
+        "Grew steadily through 1995 with roughly 30-37 orders per month",
+        "Peak growth arrived in early 1996 with 48-77 orders per month",
+        "By May 1996, monthly volume reached 77 orders, about 3x Aug 1994"
+      ],
+      "bottomLine": "The business is growing strongly, Margaret Peacock is the top salesperson, Cote de Blaye is the best product, and United Package is the most-used shipper.",
+      "keyInsights": [
+        "Total Orders: 830",
+        "Total Products Sold: 51,317 units",
+        "Total Revenue: $1,265,792.93",
+        "Average Order Value (AOV): $1,525.05",
+        "Total Shipments: 2,155 shipment lines",
+        "Best-selling product: Cote de Blaye with $141,396.73 revenue",
+        "Top customer by value: QUICK-Stop with $110,277.30 revenue",
+        "Top-performing employee: Margaret Peacock with 156 orders and $232,890.85 revenue",
+        "Most-used shipper: United Package with 326 orders",
+        "Sales trend: Monthly orders grew from about 22-26 in Aug 1994 to 77 by May 1996"
+      ],
+      "impact": "Created a scalable analytics layer that enables fast KPI reporting and business-performance analysis across products, customers, employees, and shipping operations. The warehouse design supports easier BI integration, reusable analytics queries, and future enhancements like incremental loads and ETL automation.",
+      "technologiesUsed": ["MySQL", "SQL", "ETL (Extract, Transform, Load)", "Star Schema", "Dimensional Modeling", "Data Warehousing"]
     }
   },
   {
