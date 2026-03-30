@@ -36,6 +36,11 @@ function Navbar() {
               Skills
             </Link>
           </li>
+          <li>
+            <Link to="/contact" className={`navbar-link ${isActive("/contact") ? "active" : ""}`}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
