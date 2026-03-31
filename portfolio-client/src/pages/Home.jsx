@@ -225,23 +225,6 @@ function Home() {
                 <span className="meta-pill">🎯 Open to opportunities</span>
                 <span className="meta-pill">📊 Analytics • BI • SQL</span>
               </div>
-
-              <div className="hero-buttons">
-                <Link to="/projects" className="btn btn-primary">
-                  View Projects
-                </Link>
-                <a
-                  href="https://drive.google.com/file/d/1ONt8jZE1-7a5akANDpAi0IYNlWHZ_rxb/view?usp=drivesdk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary"
-                >
-                  View Resume
-                </a>
-                <button onClick={handleDownloadCv} className="btn btn-secondary">
-                  Download CV
-                </button>
-              </div>
             </div>
 
             <aside className="hero-side">
@@ -385,7 +368,37 @@ function Home() {
             </div>
           </div>
         </section>
-      </div>
+        {/* ==== RECRUITER QUICK CONNECT ==== */}
+        <section className="reveal-on-scroll">
+          <div className="recruiter-contact-section">
+            <h3>📋 Quick Connect for Recruiters</h3>
+            <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "1.5rem" }}>
+              Reach out directly through any of these channels
+            </p>
+            <div className="recruiter-links">
+              <a href="mailto:Sanjaysanju143216@gmail.com" className="recruiter-link">
+                <span className="recruiter-link-icon">✉</span>
+                Email
+              </a>
+              <a href="tel:+917353929664" className="recruiter-link">
+                <span className="recruiter-link-icon">☎</span>
+                Call/WhatsApp
+              </a>
+              <a href="https://linkedin.com/in/sanjay-b-g-960181340" target="_blank" rel="noopener noreferrer" className="recruiter-link">
+                <span className="recruiter-link-icon">in</span>
+                LinkedIn
+              </a>
+              <a href="https://github.com/SANJAYBG307" target="_blank" rel="noopener noreferrer" className="recruiter-link">
+                <span className="recruiter-link-icon">⚙</span>
+                GitHub
+              </a>
+              <a href="https://drive.google.com/file/d/1ONt8jZE1-7a5akANDpAi0IYNlWHZ_rxb/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="recruiter-link">
+                <span className="recruiter-link-icon">📄</span>
+                Resume
+              </a>
+            </div>
+          </div>
+        </section>      </div>
     </div>
   );
 }
