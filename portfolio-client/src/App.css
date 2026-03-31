@@ -1003,3 +1003,493 @@
     padding-top: 1.7rem;
   }
 }
+
+/* ===== IMPACT STATS SECTION ===== */
+.impact-stats-section {
+  margin-bottom: 2rem;
+}
+
+.impact-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.impact-stat-card {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 14px;
+  transition: var(--transition);
+}
+
+.impact-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.stat-number {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.stat-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* ===== TECHNICAL SKILLS SECTION ===== */
+.technical-skills-section {
+  margin-bottom: 2rem;
+}
+
+.skills-preview-section {
+  margin-bottom: 2rem;
+}
+
+.skills-preview-cta {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.skill-category {
+  padding: 1.5rem;
+  border-radius: 14px;
+  transition: var(--transition);
+}
+
+.skill-category:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.skill-category h3 {
+  font-size: 1.12rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-chip {
+  display: inline-block;
+  padding: 0.5rem 0.85rem;
+  background: linear-gradient(135deg, #e9f0fb 0%, #f0f5ff 100%);
+  border: 1px solid #c8d9f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+.skill-chip:hover {
+  background: linear-gradient(135deg, #dce5f5 0%, #e3ecf9 100%);
+  border-color: var(--secondary);
+}
+
+/* ===== EXPERIENCE HIGHLIGHT SECTION ===== */
+.experience-highlight-section {
+  margin-bottom: 2.5rem;
+}
+
+.experience-card {
+  padding: 1.8rem;
+  border-radius: 14px;
+  border: 2px solid #e8eef8;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e3ecf1;
+}
+
+.experience-info h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.experience-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.3rem;
+}
+
+.experience-period {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.experience-badge {
+  padding: 0.4rem 0.9rem;
+  background: linear-gradient(135deg, #21406f 0%, #2f5a99 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.experience-highlights {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.highlight-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.highlight-icon {
+  color: var(--success);
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.highlight-item div {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ===== FEATURED PROJECTS SECTION ===== */
+.featured-projects-section {
+  margin-bottom: 2.5rem;
+}
+
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.project-preview-card {
+  padding: 1.5rem;
+  border-radius: 14px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-header h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  flex: 1;
+  line-height: 1.3;
+}
+
+.project-link {
+  display: inline-block;
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-section {
+  margin-bottom: 2.5rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.education-card {
+  padding: 1.5rem;
+  border-radius: 14px;
+  border-left: 4px solid var(--secondary);
+  transition: var(--transition);
+}
+
+.education-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.education-year {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.education-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.education-institution {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.3rem;
+}
+
+.education-detail {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.education-metric {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* ===== ADDITIONAL INFO SECTION ===== */
+.additional-info-section {
+  margin-bottom: 2.5rem;
+}
+
+.additional-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.info-card {
+  padding: 1.5rem;
+  border-radius: 14px;
+}
+
+.info-card h3 {
+  font-size: 1.08rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.info-content {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.strength-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.strength-list span {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  background: linear-gradient(135deg, #f0f5fb 0%, #e8f1fa 100%);
+  border: 1px solid #d0deef;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* ===== FINAL CTA SECTION ===== */
+.final-cta-section {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.cta-content {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1b3863 0%, #2f5a99 100%);
+  color: white;
+  border-radius: 14px;
+}
+
+.cta-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 1.05rem;
+  color: #e8f0ff;
+  margin-bottom: 1.8rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 0.95rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+.cta-content .btn-primary {
+  background: linear-gradient(135deg, #ff7a18 0%, #ffa845 100%);
+  color: white;
+}
+
+.cta-content .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 122, 24, 0.3);
+}
+
+.cta-content .btn-secondary {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1b3863;
+  border-color: white;
+}
+
+.cta-content .btn-secondary:hover {
+  background: white;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 920px) {
+  .impact-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .additional-info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  /* Impact stats - single column on mobile */
+  .impact-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skills - single column on mobile */
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects - single column on mobile */
+  .featured-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Education - single column on mobile */
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Additional info - single column on mobile */
+  .additional-info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero buttons - full width on mobile */
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Experience cards - adjust layout on mobile */
+  .experience-header {
+    flex-direction: column;
+  }
+
+  /* Project cards - adjust layout */
+  .project-header {
+    flex-direction: column;
+  }
+
+  /* CTA section adjustments */
+  .cta-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}

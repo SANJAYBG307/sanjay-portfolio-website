@@ -64,6 +64,80 @@ function About() {
           </article>
         </div>
       </section>
+
+      {/* ==== EDUCATION SECTION ==== */}
+      <section className="reveal-on-scroll" style={{ marginTop: "2.5rem" }}>
+        <div className="section-head">
+          <h2 className="section-title">Education & Background</h2>
+        </div>
+
+        <div className="education-grid">
+          <div className="education-card surface-card reveal-on-scroll">
+            <div className="education-year">2021 – 2025</div>
+            <h3>Bachelor of Engineering</h3>
+            <p className="education-institution">MVJ College of Engineering, Bengaluru</p>
+            <p className="education-detail">Electrical & Electronics Engineering</p>
+            <p className="education-metric">CGPA: 8.05</p>
+            <p style={{ marginTop: "0.6rem", fontSize: "0.88rem", color: "var(--text-secondary)" }}>
+              Developed foundational knowledge in technical systems while cultivating analytical problem-solving skills. Technical coursework complemented by hands-on data analytics projects.
+            </p>
+          </div>
+
+          <div className="education-card surface-card reveal-on-scroll">
+            <div className="education-year">2019 – 2021</div>
+            <h3>12th Standard (PCMB)</h3>
+            <p className="education-institution">Mahila Samaja PU College, Kolar</p>
+            <p className="education-metric">77%</p>
+            <p style={{ marginTop: "0.6rem", fontSize: "0.88rem", color: "var(--text-secondary)" }}>
+              Science stream specialization with focus on Physics, Chemistry, Mathematics, and Biology.
+            </p>
+          </div>
+
+          <div className="education-card surface-card reveal-on-scroll">
+            <div className="education-year">2019</div>
+            <h3>10th Standard</h3>
+            <p className="education-institution">Sri Bhavani Vidya Samsthe High School, Kolar</p>
+            <p className="education-metric">83.36%</p>
+            <p style={{ marginTop: "0.6rem", fontSize: "0.88rem", color: "var(--text-secondary)" }}>
+              Strong foundation across core academic subjects with emphasis on quantitative disciplines.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ==== LANGUAGES & ADDITIONAL INFO ==== */}
+      <section className="reveal-on-scroll" style={{ marginTop: "2.5rem" }}>
+        <div className="section-head">
+          <h2 className="section-title">Languages & Strengths</h2>
+        </div>
+
+        <div className="additional-info-cards">
+          <div className="info-card surface-card reveal-on-scroll">
+            <h3>🗣️ Languages</h3>
+            <div className="info-content">
+              <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+                <span style={{ padding: "0.5rem 0.85rem", background: "linear-gradient(135deg, #e9f0fb 0%, #f0f5ff 100%)", border: "1px solid #c8d9f0", borderRadius: "8px", fontSize: "0.9rem", fontWeight: "600", color: "var(--secondary)" }}>English</span>
+                <span style={{ padding: "0.5rem 0.85rem", background: "linear-gradient(135deg, #e9f0fb 0%, #f0f5ff 100%)", border: "1px solid #c8d9f0", borderRadius: "8px", fontSize: "0.9rem", fontWeight: "600", color: "var(--secondary)" }}>Kannada</span>
+                <span style={{ padding: "0.5rem 0.85rem", background: "linear-gradient(135deg, #e9f0fb 0%, #f0f5ff 100%)", border: "1px solid #c8d9f0", borderRadius: "8px", fontSize: "0.9rem", fontWeight: "600", color: "var(--secondary)" }}>Telugu</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="info-card surface-card reveal-on-scroll">
+            <h3>💪 Core Strengths</h3>
+            <div className="info-content">
+              <div className="strength-list">
+                <span>Data Analysis</span>
+                <span>Problem Solving</span>
+                <span>Business Insights</span>
+                <span>Data Visualization</span>
+                <span>SQL Development</span>
+                <span>Team Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

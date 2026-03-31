@@ -206,6 +206,7 @@ function Home() {
   return (
     <div className="app-container">
       <div className="page-content">
+        {/* ==== HERO SECTION ==== */}
         <section className="hero-section surface-card reveal-on-scroll">
           <div className="hero-layout">
             <div className="hero-content">
@@ -214,15 +215,15 @@ function Home() {
               <h2 className="hero-subtitle">{profile.subheadline || profile.role}</h2>
 
               <div className="profile-photo-card mobile-photo-card">
-                <img src="/profile-photo.jpeg" alt="SANJAY B G profile" className="profile-photo" />
+                <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo" />
               </div>
 
               <p className="hero-description">{profile.intro || profile.summary}</p>
 
               <div className="hero-meta">
-                <span className="meta-pill">Location: {profile.location}</span>
-                <span className="meta-pill">Open to opportunities</span>
-                <span className="meta-pill">Analytics + BI + SQL</span>
+                <span className="meta-pill">📍 {profile.location}</span>
+                <span className="meta-pill">🎯 Open to opportunities</span>
+                <span className="meta-pill">📊 Analytics • BI • SQL</span>
               </div>
 
               <div className="hero-buttons">
@@ -237,19 +238,19 @@ function Home() {
                 >
                   View Resume
                 </a>
-                <Link to="/contact" className="btn btn-secondary">
-                  Contact Me
-                </Link>
+                <button onClick={handleDownloadCv} className="btn btn-secondary">
+                  Download CV
+                </button>
               </div>
             </div>
 
             <aside className="hero-side">
               <div className="profile-photo-card desktop-photo-card">
-                <img src="/profile-photo.jpeg" alt="SANJAY B G profile" className="profile-photo" />
+                <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo" />
               </div>
 
               <div className="hero-spotlight">
-                <h3>Current Focus</h3>
+                <h3>🎯 Current Focus</h3>
                 <ul>
                   <li>Dashboard design for operations intelligence</li>
                   <li>SQL-based performance analytics</li>
@@ -263,7 +264,7 @@ function Home() {
                   <p className="hero-stat-label">Professional Experience</p>
                 </div>
                 <div className="hero-stat">
-                  <p className="hero-stat-value">9</p>
+                  <p className="hero-stat-value">9+</p>
                   <p className="hero-stat-label">Core Skills</p>
                 </div>
                 <div className="hero-stat">
@@ -275,30 +276,113 @@ function Home() {
           </div>
         </section>
 
-        <section className="reveal-on-scroll">
+        {/* ==== IMPACT STATS SECTION ==== */}
+        <section className="impact-stats-section reveal-on-scroll">
           <div className="section-head">
-            <span className="section-kicker">Core Strengths</span>
-            <h2 className="section-title">Featured Expertise</h2>
-            <p className="section-subtitle">
-              End-to-end analytics work that translates operational data into measurable business decisions.
-            </p>
+            <h2 className="section-title">Key Impact & Metrics</h2>
+            <p className="section-subtitle">Quantified outcomes from recent professional experience</p>
+          </div>
+          
+          <div className="impact-stats-grid">
+            <div className="impact-stat-card surface-card">
+              <div className="stat-number">89.35%</div>
+              <div className="stat-label">Revenue Concentration</div>
+              <div className="stat-desc">Identified top customer concentration</div>
+            </div>
+            <div className="impact-stat-card surface-card">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Routes Analyzed</div>
+              <div className="stat-desc">Identified profitable & loss-making lanes</div>
+            </div>
+            <div className="impact-stat-card surface-card">
+              <div className="stat-number">37.5%</div>
+              <div className="stat-label">Outstanding Exposure</div>
+              <div className="stat-desc">Uncovered vendor risk metrics</div>
+            </div>
+            <div className="impact-stat-card surface-card">
+              <div className="stat-number">8,800+</div>
+              <div className="stat-label">Records Analyzed</div>
+              <div className="stat-desc">Netflix content analysis</div>
+            </div>
+          </div>
+        </section>
+
+        {/* ==== SKILLS & EXPERTISE PREVIEW ==== */}
+        <section className="skills-preview-section reveal-on-scroll">
+          <div className="section-head">
+            <span className="section-kicker">Expertise</span>
+            <h2 className="section-title">Technical Foundation</h2>
+            <p className="section-subtitle">Core competencies across data analytics, BI, and engineering</p>
           </div>
 
           <div className="expertise-grid">
             <article className="expertise-card surface-card reveal-on-scroll">
+              <div className="expertise-icon">📈</div>
               <h3>Data Analytics</h3>
-              <p>Build structured analyses to uncover trends, bottlenecks, and opportunities from complex datasets.</p>
+              <p>SQL, Python, Pandas • EDA & insights from complex datasets</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">
-              <h3>Data Visualization</h3>
-              <p>Design clear dashboards in Power BI and Tableau to support faster and better decisions.</p>
+              <div className="expertise-icon">📊</div>
+              <h3>BI & Dashboards</h3>
+              <p>Power BI, Tableau, DAX • Interactive dashboards & reporting</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">
+              <div className="expertise-icon">🔧</div>
               <h3>Data Engineering</h3>
-              <p>Create dependable ETL pipelines and data models that power consistent reporting layers.</p>
+              <p>ETL, Data Modeling, Dimensional Design • Scalable pipelines</p>
             </article>
+          </div>
+
+          <div className="skills-preview-cta">
+            <Link to="/skills" className="btn btn-secondary">
+              View All Skills →
+            </Link>
+          </div>
+        </section>
+
+        {/* ==== CORE STRENGTHS SECTION ==== */}
+        <section className="reveal-on-scroll">
+          <div className="section-head">
+            <h2 className="section-title">Why Work With Me</h2>
+            <p className="section-subtitle">Quick overview of what I bring to the table</p>
+          </div>
+
+          <div className="expertise-grid">
+            <article className="expertise-card surface-card reveal-on-scroll">
+              <div className="expertise-icon">🎯</div>
+              <h3>Results-Driven</h3>
+              <p>Focus on delivering insights that drive measurable business impact.</p>
+            </article>
+
+            <article className="expertise-card surface-card reveal-on-scroll">
+              <div className="expertise-icon">🛠️</div>
+              <h3>Hands-On</h3>
+              <p>Work directly with data from extraction through visualization.</p>
+            </article>
+
+            <article className="expertise-card surface-card reveal-on-scroll">
+              <div className="expertise-icon">🤝</div>
+              <h3>Collaborative</h3>
+              <p>Translate technical concepts for non-technical stakeholders.</p>
+            </article>
+          </div>
+        </section>
+
+        {/* ==== FINAL CTA ==== */}
+        <section className="final-cta-section reveal-on-scroll">
+          <div className="cta-content surface-card">
+            <h2>Ready to see my analytics in action?</h2>
+            <p>Let's discuss how I can contribute to your data-driven initiatives.</p>
+            <div className="cta-buttons">
+              <Link to="/contact" className="btn btn-primary btn-lg">
+                Get In Touch
+              </Link>
+              <Link to="/projects" className="btn btn-secondary btn-lg">
+                Explore My Work
+              </Link>
+            </div>
           </div>
         </section>
       </div>
