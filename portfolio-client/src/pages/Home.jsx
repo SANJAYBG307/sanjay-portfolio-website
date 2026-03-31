@@ -210,20 +210,20 @@ function Home() {
         <section className="hero-section surface-card reveal-on-scroll">
           <div className="hero-layout">
             <div className="hero-content">
-              <span className="section-kicker">Data Portfolio</span>
-              <h1 className="hero-title">{profile.headline || profile.name}</h1>
-              <h2 className="hero-subtitle">{profile.subheadline || profile.role}</h2>
+              <span className="section-kicker">Data Analyst</span>
+              <h1 className="hero-title">SANJAY B G</h1>
+              <h2 className="hero-subtitle">SQL Specialist | BI Developer | Data Analytics</h2>
 
               <div className="profile-photo-card mobile-photo-card">
                 <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo" />
               </div>
 
-              <p className="hero-description">{profile.intro || profile.summary}</p>
+              <p className="hero-description">Data Analyst with experience in logistics analytics, specializing in SQL-based data transformation, KPI development, and data visualization using Power BI and Tableau. Skilled in analyzing large datasets to identify trends, optimize business performance, and support data-driven decision-making. Proficient in Python (Pandas), data modeling, ETL processes, and dashboard development.</p>
 
               <div className="hero-meta">
-                <span className="meta-pill">📍 {profile.location}</span>
-                <span className="meta-pill">🎯 Open to opportunities</span>
-                <span className="meta-pill">📊 Analytics • BI • SQL</span>
+                <span className="meta-pill">📍 Bengaluru, Karnataka</span>
+                <span className="meta-pill">🔗 Open to Opportunities</span>
+                <span className="meta-pill">💼 6 Months Professional Experience</span>
               </div>
             </div>
 
@@ -233,26 +233,27 @@ function Home() {
               </div>
 
               <div className="hero-spotlight">
-                <h3>🎯 Current Focus</h3>
+                <h3>🎯 Key Achievements</h3>
                 <ul>
-                  <li>Dashboard design for operations intelligence</li>
-                  <li>SQL-based performance analytics</li>
-                  <li>Data modeling for scalable reporting</li>
+                  <li>89.35% revenue concentration identified</li>
+                  <li>50+ transportation routes analyzed</li>
+                  <li>Power BI & Tableau dashboards deployed</li>
+                  <li>SQL-driven KPI framework developed</li>
                 </ul>
               </div>
 
               <div className="hero-stats">
                 <div className="hero-stat">
-                  <p className="hero-stat-value">6 Months</p>
-                  <p className="hero-stat-label">Professional Experience</p>
+                  <p className="hero-stat-value">50+</p>
+                  <p className="hero-stat-label">Routes Analyzed</p>
                 </div>
                 <div className="hero-stat">
                   <p className="hero-stat-value">9+</p>
-                  <p className="hero-stat-label">Core Skills</p>
+                  <p className="hero-stat-label">Technical Skills</p>
                 </div>
                 <div className="hero-stat">
                   <p className="hero-stat-value">100%</p>
-                  <p className="hero-stat-label">Delivery Focus</p>
+                  <p className="hero-stat-label">Delivery Drive</p>
                 </div>
               </div>
             </aside>
@@ -262,30 +263,30 @@ function Home() {
         {/* ==== IMPACT STATS SECTION ==== */}
         <section className="impact-stats-section reveal-on-scroll">
           <div className="section-head">
-            <h2 className="section-title">Key Impact & Metrics</h2>
-            <p className="section-subtitle">Quantified outcomes from recent professional experience</p>
+            <h2 className="section-title">Quantified Impact</h2>
+            <p className="section-subtitle">Real results from recent professional experience at Manoj Cargo Carriers</p>
           </div>
           
           <div className="impact-stats-grid">
             <div className="impact-stat-card surface-card">
               <div className="stat-number">89.35%</div>
               <div className="stat-label">Revenue Concentration</div>
-              <div className="stat-desc">Identified top customer concentration</div>
+              <div className="stat-desc">Identified top customer concentration for strategic planning</div>
             </div>
             <div className="impact-stat-card surface-card">
               <div className="stat-number">50+</div>
               <div className="stat-label">Routes Analyzed</div>
-              <div className="stat-desc">Identified profitable & loss-making lanes</div>
+              <div className="stat-desc">Identified profitable (Bangalore–Daman) & loss-making lanes</div>
             </div>
             <div className="impact-stat-card surface-card">
               <div className="stat-number">37.5%</div>
               <div className="stat-label">Outstanding Exposure</div>
-              <div className="stat-desc">Uncovered vendor risk metrics</div>
+              <div className="stat-desc">Uncovered vendor risk metrics for decision-making</div>
             </div>
             <div className="impact-stat-card surface-card">
-              <div className="stat-number">8,800+</div>
-              <div className="stat-label">Records Analyzed</div>
-              <div className="stat-desc">Netflix content analysis</div>
+              <div className="stat-number">10K+</div>
+              <div className="stat-label">Records Processed</div>
+              <div className="stat-desc">SQL & Python-based data transformation & validation</div>
             </div>
           </div>
         </section>
@@ -293,34 +294,34 @@ function Home() {
         {/* ==== SKILLS & EXPERTISE PREVIEW ==== */}
         <section className="skills-preview-section reveal-on-scroll">
           <div className="section-head">
-            <span className="section-kicker">Expertise</span>
-            <h2 className="section-title">Technical Foundation</h2>
-            <p className="section-subtitle">Core competencies across data analytics, BI, and engineering</p>
+            <span className="section-kicker">Technical Stack</span>
+            <h2 className="section-title">Core Competencies</h2>
+            <p className="section-subtitle">Production-ready tools and methodologies</p>
           </div>
 
           <div className="expertise-grid">
             <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">📈</div>
-              <h3>Data Analytics</h3>
-              <p>SQL, Python, Pandas • EDA & insights from complex datasets</p>
+              <div className="expertise-icon">🗄️</div>
+              <h3>SQL & Databases</h3>
+              <p>MySQL, CTEs, Window Functions, Subqueries • Data transformation & cleaning</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">
               <div className="expertise-icon">📊</div>
-              <h3>BI & Dashboards</h3>
-              <p>Power BI, Tableau, DAX • Interactive dashboards & reporting</p>
+              <h3>BI & Visualization</h3>
+              <p>Power BI, Tableau, DAX • Dashboard development & KPI reporting</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">🔧</div>
-              <h3>Data Engineering</h3>
-              <p>ETL, Data Modeling, Dimensional Design • Scalable pipelines</p>
+              <div className="expertise-icon">🐍</div>
+              <h3>Programming & ETL</h3>
+              <p>Python, Pandas, NumPy • Data modeling, validation & reconciliation</p>
             </article>
           </div>
 
           <div className="skills-preview-cta">
             <Link to="/skills" className="btn btn-secondary">
-              View All Skills →
+              View Complete Skills →
             </Link>
           </div>
         </section>
@@ -328,27 +329,27 @@ function Home() {
         {/* ==== CORE STRENGTHS SECTION ==== */}
         <section className="reveal-on-scroll">
           <div className="section-head">
-            <h2 className="section-title">Why Work With Me</h2>
-            <p className="section-subtitle">Quick overview of what I bring to the table</p>
+            <h2 className="section-title">Professional Strengths</h2>
+            <p className="section-subtitle">Data-driven problem solving with measurable outcomes</p>
           </div>
 
           <div className="expertise-grid">
             <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">🎯</div>
-              <h3>Results-Driven</h3>
-              <p>Focus on delivering insights that drive measurable business impact.</p>
+              <div className="expertise-icon">📈</div>
+              <h3>End-to-End Analytics</h3>
+              <p>From data extraction and transformation to dashboard deployment and insight communication.</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">🛠️</div>
-              <h3>Hands-On</h3>
-              <p>Work directly with data from extraction through visualization.</p>
+              <div className="expertise-icon">🔍</div>
+              <h3>Analytical Rigor</h3>
+              <p>SQL-driven analysis with focus on data quality, validation, and consistency across systems.</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">
               <div className="expertise-icon">🤝</div>
-              <h3>Collaborative</h3>
-              <p>Translate technical concepts for non-technical stakeholders.</p>
+              <h3>Cross-Functional Collaboration</h3>
+              <p>Experience supporting microservices migration and working with engineering teams on data consistency.</p>
             </article>
           </div>
         </section>
@@ -377,19 +378,15 @@ function Home() {
             </p>
             <div className="recruiter-links">
               <a href="mailto:Sanjaysanju143216@gmail.com" className="recruiter-link">
-                <span className="recruiter-link-icon">✉</span>
+                <span className="recruiter-link-icon">📧</span>
                 Email
               </a>
-              <a href="tel:+917353929664" className="recruiter-link">
-                <span className="recruiter-link-icon">☎</span>
-                Call/WhatsApp
-              </a>
               <a href="https://linkedin.com/in/sanjay-b-g-960181340" target="_blank" rel="noopener noreferrer" className="recruiter-link">
-                <span className="recruiter-link-icon">in</span>
+                <span className="recruiter-link-icon">💼</span>
                 LinkedIn
               </a>
               <a href="https://github.com/SANJAYBG307" target="_blank" rel="noopener noreferrer" className="recruiter-link">
-                <span className="recruiter-link-icon">⚙</span>
+                <span className="recruiter-link-icon">🔗</span>
                 GitHub
               </a>
               <a href="https://drive.google.com/file/d/1ONt8jZE1-7a5akANDpAi0IYNlWHZ_rxb/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="recruiter-link">

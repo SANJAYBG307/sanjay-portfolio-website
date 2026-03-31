@@ -1479,22 +1479,25 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.8rem 1.2rem;
-  background: white;
-  border: 1px solid #c8d9f0;
-  border-radius: 10px;
+  padding: 0.9rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
   font-weight: 600;
   color: var(--secondary);
   text-decoration: none;
   transition: var(--transition);
   font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(31, 59, 100, 0.1);
 }
 
 .recruiter-link:hover {
-  background: #f7faff;
-  border-color: var(--secondary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(31, 59, 100, 0.15);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 122, 24, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(31, 59, 100, 0.2);
+  color: var(--accent);
 }
 
 .recruiter-link-icon {
