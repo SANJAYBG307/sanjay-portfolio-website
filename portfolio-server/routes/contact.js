@@ -5,6 +5,96 @@ const path = require("path");
 const router = express.Router();
 const messagesFilePath = path.join(__dirname, "../data/contact-messages.json");
 
+// Rate limiting storage (in-memory, resets on server restart)
+const rateLimitStore = new Map();
+const RATE_LIMIT_WINDOW = 3600000; // 1 hour in milliseconds
+const MAX_REQUESTS_PER_HOUR = 5;
+
+// Validation functions
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email) && email.length <= 100;
+}
+
+function sanitizeInput(input) {
+  return String(input)
+    .trim()
+    .replace(/[<>]/g, "") // Remove potential HTML/script tags
+    .replace(/javascript:/gi, "")
+    .replace(/on\w+\s*=/gi, "");
+}
+
+function validateContactData(data) {
+  const { name, email, message } = data;
+
+  // Required fields check
+  if (!name || !email || !message) {
+    return {
+      valid: false,
+      error: "Name, email, and message are required."
+    };
+  }
+
+  // Name validation
+  const nameStr = String(name).trim();
+  if (nameStr.length < 2 || nameStr.length > 100) {
+    return {
+      valid: false,
+      error: "Name must be between 2 and 100 characters."
+    };
+  }
+
+  // Email validation
+  const emailStr = String(email).trim().toLowerCase();
+  if (!isValidEmail(emailStr)) {
+    return {
+      valid: false,
+      error: "Please provide a valid email address."
+    };
+  }
+
+  // Message validation
+  const messageStr = String(message).trim();
+  if (messageStr.length < 10 || messageStr.length > 2000) {
+    return {
+      valid: false,
+      error: "Message must be between 10 and 2000 characters."
+    };
+  }
+
+  return { valid: true };
+}
+
+function checkRateLimit(ip) {
+  const now = Date.now();
+  
+  if (!rateLimitStore.has(ip)) {
+    rateLimitStore.set(ip, { count: 1, firstRequest: now });
+    return { allowed: true };
+  }
+
+  const { count, firstRequest } = rateLimitStore.get(ip);
+  const timePassed = now - firstRequest;
+
+  // Reset if window has passed
+  if (timePassed > RATE_LIMIT_WINDOW) {
+    rateLimitStore.set(ip, { count: 1, firstRequest: now });
+    return { allowed: true };
+  }
+
+  // Check if exceeded limit
+  if (count >= MAX_REQUESTS_PER_HOUR) {
+    return {
+      allowed: false,
+      error: `Too many requests. Please try again in ${Math.ceil((RATE_LIMIT_WINDOW - timePassed) / 60000)} minutes.`
+    };
+  }
+
+  // Increment count
+  rateLimitStore.set(ip, { count: count + 1, firstRequest });
+  return { allowed: true };
+}
+
 function readMessages() {
   try {
     if (!fs.existsSync(messagesFilePath)) {
@@ -26,41 +116,62 @@ function writeMessages(messages) {
 /*
 POST /api/contact
 
-Receives messages from the portfolio contact form
+Receives messages from the portfolio contact form with validation
 */
 router.post("/", (req, res) => {
+  const clientIP = req.ip || req.connection.remoteAddress;
 
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({
+  // Check rate limit
+  const rateCheck = checkRateLimit(clientIP);
+  if (!rateCheck.allowed) {
+    return res.status(429).json({
       success: false,
-      message: "Name, email, and message are required."
+      message: rateCheck.error
     });
   }
 
+  const { name, email, message } = req.body;
+
+  // Validate data
+  const validation = validateContactData({ name, email, message });
+  if (!validation.valid) {
+    return res.status(400).json({
+      success: false,
+      message: validation.error
+    });
+  }
+
+  // Sanitize inputs
   const newMessage = {
     id: `msg_${Date.now()}`,
-    name: String(name).trim(),
-    email: String(email).trim(),
-    message: String(message).trim(),
+    name: sanitizeInput(name),
+    email: String(email).trim().toLowerCase(),
+    message: sanitizeInput(message),
     submittedAt: new Date().toISOString()
   };
 
-  const existingMessages = readMessages();
-  existingMessages.unshift(newMessage);
-  writeMessages(existingMessages);
+  try {
+    const existingMessages = readMessages();
+    existingMessages.unshift(newMessage);
+    writeMessages(existingMessages);
 
-  console.log("New contact message received:");
-  console.log("Name:", newMessage.name);
-  console.log("Email:", newMessage.email);
-  console.log("Message:", newMessage.message);
-  console.log("Submitted At:", newMessage.submittedAt);
+    console.log("✓ New contact message received:");
+    console.log("  Name:", newMessage.name);
+    console.log("  Email:", newMessage.email);
+    console.log("  Submitted At:", newMessage.submittedAt);
 
-  res.json({
-    success: true,
-    message: "Message received successfully!"
-  });
+    res.json({
+      success: true,
+      message: "Thank you! Your message has been received. I'll get back to you soon."
+    });
+
+  } catch (error) {
+    console.error("Error saving message:", error);
+    res.status(500).json({
+      success: false,
+      message: "An error occurred. Please try again later."
+    });
+  }
 
 });
 
