@@ -1,25 +1,50 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+import profileData from "../data/profile.json";
+import projectsData from "../data/projects.json";
+import seedContactMessages from "../data/contact-messages.json";
 
-// Fetch profile information
+const CONTACT_STORAGE_KEY = "portfolio_contact_messages";
+
+// Keep API signatures async so existing pages continue to work unchanged.
 export async function getProfile() {
-  const response = await fetch(`${API_BASE_URL}/profile`);
-  return response.json();
+  return profileData;
 }
 
-// Fetch projects
 export async function getProjects() {
-  const response = await fetch(`${API_BASE_URL}/projects`);
-  return response.json();
+  return projectsData;
+}
+
+function readStoredMessages() {
+  try {
+    const raw = localStorage.getItem(CONTACT_STORAGE_KEY);
+    if (!raw) {
+      return seedContactMessages;
+    }
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : seedContactMessages;
+  } catch {
+    return seedContactMessages;
+  }
+}
+
+function writeStoredMessages(messages) {
+  localStorage.setItem(CONTACT_STORAGE_KEY, JSON.stringify(messages));
 }
 
 export async function sendContactMessage(data) {
-  const response = await fetch(`${API_BASE_URL}/contact`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
+  const message = {
+    id: `msg_${Date.now()}`,
+    name: String(data?.name || "").trim(),
+    email: String(data?.email || "").trim().toLowerCase(),
+    message: String(data?.message || "").trim(),
+    submittedAt: new Date().toISOString()
+  };
 
-  return response.json();
+  const existingMessages = readStoredMessages();
+  writeStoredMessages([message, ...existingMessages]);
+
+  return {
+    success: true,
+    message: "Thank you! Your message has been received. I'll get back to you soon."
+  };
 }
