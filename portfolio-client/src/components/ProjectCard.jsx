@@ -1,4 +1,6 @@
-function ProjectCard({ project, onOpenDetails }) {
+import { Link } from "react-router-dom";
+
+function ProjectCard({ project }) {
   const highlights = project.highlights || [project.description];
 
   return (
@@ -17,9 +19,9 @@ function ProjectCard({ project, onOpenDetails }) {
             </span>
           ))}
         </div>
-        <button type="button" className="project-link" onClick={() => onOpenDetails(project)}>
+        <Link to={`/projects/${project.id}`} className="project-link">
           View details
-        </button>
+        </Link>
       </div>
     </article>
   );

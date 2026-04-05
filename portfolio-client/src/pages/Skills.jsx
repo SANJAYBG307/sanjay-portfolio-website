@@ -41,6 +41,12 @@ function Skills() {
   };
 
   const resolvedSkills = Object.keys(groupedSkills).length ? groupedSkills : fallbackGroupedSkills;
+  const compactSkills = Object.entries(resolvedSkills)
+    .slice(0, 4)
+    .reduce((acc, [category, entries]) => {
+      acc[category] = entries.slice(0, 5);
+      return acc;
+    }, {});
 
   const categoryMeta = {
     "Data Analytics": {
@@ -88,69 +94,6 @@ function Skills() {
           </div>
         ) : (
           <>
-            {/* ==== DETAILED SKILLS BY CATEGORY ==== */}
-            <section className="technical-skills-section reveal-on-scroll">
-              <div className="section-head" style={{ marginBottom: "2rem" }}>
-                <h2 className="section-title" style={{ fontSize: "2rem", marginBottom: "1.5rem" }}>Detailed Technical Skills</h2>
-              </div>
-
-              <div className="skills-categories-grid">
-                <div className="skill-category surface-card">
-                  <h3>🗄️ Databases & SQL</h3>
-                  <div className="skill-chips">
-                    <span className="skill-chip">SQL</span>
-                    <span className="skill-chip">MySQL</span>
-                    <span className="skill-chip">CTEs</span>
-                    <span className="skill-chip">Window Functions</span>
-                    <span className="skill-chip">Subqueries</span>
-                    <span className="skill-chip">Joins</span>
-                    <span className="skill-chip">Aggregations</span>
-                  </div>
-                </div>
-
-                <div className="skill-category surface-card">
-                  <h3>🐍 Programming & ETL</h3>
-                  <div className="skill-chips">
-                    <span className="skill-chip">Python</span>
-                    <span className="skill-chip">Pandas</span>
-                    <span className="skill-chip">NumPy</span>
-                    <span className="skill-chip">ETL Pipelines</span>
-                    <span className="skill-chip">Data Cleaning</span>
-                    <span className="skill-chip">Data Transformation</span>
-                    <span className="skill-chip">Scripting</span>
-                  </div>
-                </div>
-
-                <div className="skill-category surface-card">
-                  <h3>📊 BI & Visualization</h3>
-                  <div className="skill-chips">
-                    <span className="skill-chip">Power BI</span>
-                    <span className="skill-chip">Tableau</span>
-                    <span className="skill-chip">DAX</span>
-                    <span className="skill-chip">Power Query</span>
-                    <span className="skill-chip">Dashboards</span>
-                    <span className="skill-chip">KPI Tracking</span>
-                    <span className="skill-chip">Report Design</span>
-                  </div>
-                </div>
-
-                <div className="skill-category surface-card">
-                  <h3>🛠️ Tools & Platforms</h3>
-                  <div className="skill-chips">
-                    <span className="skill-chip">Excel</span>
-                    <span className="skill-chip">XLOOKUP</span>
-                    <span className="skill-chip">Pivot Tables</span>
-                    <span className="skill-chip">Git</span>
-                    <span className="skill-chip">GitHub</span>
-                    <span className="skill-chip">Data Modeling</span>
-                    <span className="skill-chip">Dimensional Modeling</span>
-                    <span className="skill-chip">Star Schema</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* ==== PROFICIENCY LEVELS ==== */}
             <section className="surface-card skill-section reveal-on-scroll" style={{ marginTop: "2rem" }}>
               <h2 className="skill-section-title">Proficiency Matrix</h2>
               <div className="metrics-strip" style={{ marginTop: "1.5rem" }}>
@@ -159,7 +102,7 @@ function Skills() {
                   <p className="metric-label">Professional Experience</p>
                 </article>
                 <article className="metric-card">
-                  <p className="metric-value">15+</p>
+                  <p className="metric-value">9+</p>
                   <p className="metric-label">Technical Skills</p>
                 </article>
                 <article className="metric-card">
@@ -170,14 +113,14 @@ function Skills() {
             </section>
 
             {/* ==== EXISTING SKILLS FROM API ==== */}
-            <section style={{ marginTop: "2.5rem" }}>
+            <section style={{ marginTop: "2rem" }}>
               <div className="section-head">
-                <h2 className="section-title" style={{ fontSize: "2rem", marginBottom: "1rem" }}>API Skills Breakdown</h2>
-                <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)" }}>Detailed breakdown by category from your profile data</p>
+                <h2 className="section-title" style={{ fontSize: "2rem", marginBottom: "1rem" }}>Core Skills by Category</h2>
+                <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)" }}>A concise, recruiter-friendly snapshot from your profile data</p>
               </div>
 
               <div className="skills-wrapper">
-                {Object.entries(resolvedSkills).map(([category, categorySkills]) => {
+                {Object.entries(compactSkills).map(([category, categorySkills]) => {
                   const meta = categoryMeta[category] || { icon: "SK", note: "Core technical capability" };
 
                   return (
@@ -206,24 +149,6 @@ function Skills() {
                     </article>
                   );
                 })}
-
-                <section className="surface-card skill-section reveal-on-scroll">
-                  <h2 className="skill-section-title">Proficiency Overview</h2>
-                  <div className="metrics-strip">
-                    <article className="metric-card">
-                      <p className="metric-value">6 Months</p>
-                      <p className="metric-label">Professional Experience</p>
-                    </article>
-                    <article className="metric-card">
-                      <p className="metric-value">9</p>
-                      <p className="metric-label">Core Tools and Methods</p>
-                    </article>
-                    <article className="metric-card">
-                      <p className="metric-value">24/7</p>
-                      <p className="metric-label">Learning Mindset</p>
-                    </article>
-                  </div>
-                </section>
               </div>
             </section>
           </>

@@ -210,15 +210,15 @@ function Home() {
         <section className="hero-section surface-card reveal-on-scroll">
           <div className="hero-layout">
             <div className="hero-content">
-              <span className="section-kicker">Data Analyst</span>
+              <span className="section-kicker">Analytics Portfolio</span>
               <h1 className="hero-title">SANJAY B G</h1>
-              <h2 className="hero-subtitle">SQL Specialist | BI Developer | Data Analytics</h2>
+              <h2 className="hero-subtitle">Data Analyst | SQL, Python, Excel, Power BI</h2>
 
               <div className="profile-photo-card mobile-photo-card">
                 <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo" />
               </div>
 
-              <p className="hero-description">Data Analyst with experience in logistics analytics, specializing in SQL-based data transformation, KPI development, and data visualization using Power BI and Tableau. Skilled in analyzing large datasets to identify trends, optimize business performance, and support data-driven decision-making. Proficient in Python (Pandas), data modeling, ETL processes, and dashboard development.</p>
+              <p className="hero-description">Focused on SQL, Python, and BI dashboards to turn operational data into clear, measurable business decisions.</p>
 
               <div className="hero-meta">
                 <span className="meta-pill">📍 Bengaluru, Karnataka</span>
@@ -238,7 +238,6 @@ function Home() {
                   <li>89.35% revenue concentration identified</li>
                   <li>50+ transportation routes analyzed</li>
                   <li>Power BI & Tableau dashboards deployed</li>
-                  <li>SQL-driven KPI framework developed</li>
                 </ul>
               </div>
 
@@ -326,34 +325,6 @@ function Home() {
           </div>
         </section>
 
-        {/* ==== CORE STRENGTHS SECTION ==== */}
-        <section className="reveal-on-scroll">
-          <div className="section-head">
-            <h2 className="section-title">Professional Strengths</h2>
-            <p className="section-subtitle">Data-driven problem solving with measurable outcomes</p>
-          </div>
-
-          <div className="expertise-grid">
-            <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">📈</div>
-              <h3>End-to-End Analytics</h3>
-              <p>From data extraction and transformation to dashboard deployment and insight communication.</p>
-            </article>
-
-            <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">🔍</div>
-              <h3>Analytical Rigor</h3>
-              <p>SQL-driven analysis with focus on data quality, validation, and consistency across systems.</p>
-            </article>
-
-            <article className="expertise-card surface-card reveal-on-scroll">
-              <div className="expertise-icon">🤝</div>
-              <h3>Cross-Functional Collaboration</h3>
-              <p>Experience supporting microservices migration and working with engineering teams on data consistency.</p>
-            </article>
-          </div>
-        </section>
-
         {/* ==== FINAL CTA ==== */}
         <section className="final-cta-section reveal-on-scroll">
           <div className="cta-content surface-card">
@@ -374,7 +345,7 @@ function Home() {
           <div className="recruiter-contact-section">
             <h3>📋 Quick Connect for Recruiters</h3>
             <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "1.5rem" }}>
-              Reach out directly through any of these channels
+              Reach out through any of these channels
             </p>
             <div className="recruiter-links">
               <a href="mailto:Sanjaysanju143216@gmail.com" className="recruiter-link">
