@@ -10,6 +10,19 @@
   padding: 2.5rem 0 4rem;
 }
 
+.home-compact {
+  padding-top: 1.8rem;
+  padding-bottom: 2.4rem;
+}
+
+.home-compact > section {
+  margin-bottom: 1.35rem;
+}
+
+.home-compact > section:last-child {
+  margin-bottom: 0;
+}
+
 .surface-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -184,8 +197,8 @@
 
 .hero-layout {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1.35fr 1fr;
+  gap: 1.8rem;
+  grid-template-columns: 1.28fr 0.92fr;
 }
 
 .hero-content,
@@ -203,6 +216,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 0.85rem;
+  padding-left: 0.3rem;
 }
 
 .profile-photo-card {
@@ -235,18 +250,28 @@
 .hero-title {
   font-size: clamp(2rem, 4.8vw, 3.4rem);
   line-height: 1.05;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.45rem;
 }
 
 .hero-subtitle {
   font-size: clamp(1.2rem, 2.6vw, 1.7rem);
   color: var(--secondary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
+}
+
+.hero-headline-note {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
 }
 
 .hero-description {
   max-width: 62ch;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.home-compact .hero-description {
+  margin-bottom: 1.2rem;
 }
 
 .hero-meta {
@@ -254,6 +279,10 @@
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-bottom: 1.6rem;
+}
+
+.home-compact .hero-meta {
+  margin-bottom: 0.85rem;
 }
 
 .meta-pill {
@@ -342,7 +371,7 @@
 }
 
 .hero-spotlight {
-  padding: 1.2rem;
+  padding: 1rem;
   border-radius: 14px;
   background: linear-gradient(140deg, #1b3863 0%, #2f5a99 100%);
   color: #e8f0ff;
@@ -367,18 +396,33 @@
 }
 
 .hero-stats {
-  margin-top: 1rem;
+  margin-top: 0.1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
+  gap: 0.55rem;
 }
 
 .hero-stat {
   text-align: center;
-  padding: 0.7rem 0.45rem;
+  padding: 0.62rem 0.35rem;
   background: #f7faff;
   border: 1px solid #dbe4f2;
   border-radius: 12px;
+}
+
+.hero-side-links {
+  margin-top: 0.1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid #dce6f3;
+}
+
+.hero-side-links .social-links {
+  gap: 0.55rem;
+}
+
+.hero-side-links .social-link {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.84rem;
 }
 
 .hero-stat-value {
@@ -1165,6 +1209,10 @@
   .hero-stats {
     width: 100%;
   }
+
+  .hero-side {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1278,11 +1326,24 @@
     width: min(1120px, 100% - 1.2rem);
     padding-top: 1.7rem;
   }
+
+  .home-compact {
+    padding-top: 1.25rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .home-compact > section {
+    margin-bottom: 1rem;
+  }
 }
 
 /* ===== IMPACT STATS SECTION ===== */
 .impact-stats-section {
   margin-bottom: 2rem;
+}
+
+.home-compact .impact-stats-section {
+  margin-bottom: 1.35rem;
 }
 
 .impact-stats-grid {
@@ -1461,6 +1522,10 @@
 /* ===== FEATURED PROJECTS SECTION ===== */
 .featured-projects-section {
   margin-bottom: 2.5rem;
+}
+
+.home-compact .featured-projects-section {
+  margin-bottom: 1.35rem;
 }
 
 .featured-projects-grid {
@@ -1695,6 +1760,11 @@
   border: 1px solid #d0deef;
   text-align: center;
   margin-top: 2rem;
+}
+
+.home-compact .recruiter-contact-section {
+  margin-top: 0.4rem;
+  padding: 1.6rem;
 }
 
 .recruiter-contact-section h3 {
