@@ -218,12 +218,12 @@ function Home() {
                 <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo" />
               </div>
 
-              <p className="hero-description">Focused on SQL, Python, and BI dashboards to turn operational data into clear, measurable business decisions.</p>
+              <p className="hero-description">Focused on SQL, Python, and BI dashboards to turn GC, GDM, and THP data into clear, measurable business decisions.</p>
 
               <div className="hero-meta">
                 <span className="meta-pill">📍 Bengaluru, Karnataka</span>
                 <span className="meta-pill">🔗 Open to Opportunities</span>
-                <span className="meta-pill">💼 6 Months Professional Experience</span>
+                <span className="meta-pill">💼 3 Internship Case Studies</span>
               </div>
             </div>
 
@@ -235,24 +235,24 @@ function Home() {
               <div className="hero-spotlight">
                 <h3>🎯 Key Achievements</h3>
                 <ul>
-                  <li>89.35% revenue concentration identified</li>
-                  <li>50+ transportation routes analyzed</li>
-                  <li>Power BI & Tableau dashboards deployed</li>
+                  <li>2.17M freight revenue analyzed from GC data</li>
+                  <li>3.86M transport cost reviewed from GDM data</li>
+                  <li>4.33M vendor spend tracked from THP data</li>
                 </ul>
               </div>
 
               <div className="hero-stats">
                 <div className="hero-stat">
-                  <p className="hero-stat-value">50+</p>
-                  <p className="hero-stat-label">Routes Analyzed</p>
+                  <p className="hero-stat-value">3</p>
+                  <p className="hero-stat-label">Case Studies</p>
                 </div>
                 <div className="hero-stat">
-                  <p className="hero-stat-value">9+</p>
-                  <p className="hero-stat-label">Technical Skills</p>
+                  <p className="hero-stat-value">250</p>
+                  <p className="hero-stat-label">Records per Dataset</p>
                 </div>
                 <div className="hero-stat">
-                  <p className="hero-stat-value">100%</p>
-                  <p className="hero-stat-label">Delivery Drive</p>
+                  <p className="hero-stat-value">4.33M</p>
+                  <p className="hero-stat-label">Vendor Spend Reviewed</p>
                 </div>
               </div>
             </aside>
@@ -263,29 +263,29 @@ function Home() {
         <section className="impact-stats-section reveal-on-scroll">
           <div className="section-head">
             <h2 className="section-title">Quantified Impact</h2>
-            <p className="section-subtitle">Real results from recent professional experience at Manoj Cargo Carriers</p>
+            <p className="section-subtitle">Real results from GC, GDM, and THP analysis during internship experience</p>
           </div>
           
           <div className="impact-stats-grid">
             <div className="impact-stat-card surface-card">
-              <div className="stat-number">89.35%</div>
-              <div className="stat-label">Revenue Concentration</div>
-              <div className="stat-desc">Identified top customer concentration for strategic planning</div>
+              <div className="stat-number">2.17M</div>
+              <div className="stat-label">Freight Revenue</div>
+              <div className="stat-desc">Mapped customer and route concentration in GC</div>
             </div>
             <div className="impact-stat-card surface-card">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Routes Analyzed</div>
-              <div className="stat-desc">Identified profitable (Bangalore–Daman) & loss-making lanes</div>
+              <div className="stat-number">3.86M</div>
+              <div className="stat-label">Transport Cost</div>
+              <div className="stat-desc">Measured dispatch efficiency and route cost exposure</div>
             </div>
             <div className="impact-stat-card surface-card">
-              <div className="stat-number">37.5%</div>
-              <div className="stat-label">Outstanding Exposure</div>
-              <div className="stat-desc">Uncovered vendor risk metrics for decision-making</div>
+              <div className="stat-number">2.04M</div>
+              <div className="stat-label">Outstanding Payables</div>
+              <div className="stat-desc">Highlighted vendor liquidity pressure in THP</div>
             </div>
             <div className="impact-stat-card surface-card">
-              <div className="stat-number">10K+</div>
-              <div className="stat-label">Records Processed</div>
-              <div className="stat-desc">SQL & Python-based data transformation & validation</div>
+              <div className="stat-number">1.20%</div>
+              <div className="stat-label">Delivery Capture</div>
+              <div className="stat-desc">Exposed SLA reporting gaps in GC tracking</div>
             </div>
           </div>
         </section>
@@ -302,7 +302,7 @@ function Home() {
             <article className="expertise-card surface-card reveal-on-scroll">
               <div className="expertise-icon">🗄️</div>
               <h3>SQL & Databases</h3>
-              <p>MySQL, CTEs, Window Functions, Subqueries • Data transformation & cleaning</p>
+              <p>MySQL, CTEs, Window Functions, Subqueries • Revenue, operations, and vendor analysis</p>
             </article>
 
             <article className="expertise-card surface-card reveal-on-scroll">

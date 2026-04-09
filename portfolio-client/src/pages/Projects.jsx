@@ -26,7 +26,7 @@ function Projects() {
           <span className="section-kicker">Portfolio Work</span>
           <h1 className="section-title">Featured Projects</h1>
           <p className="section-subtitle">
-            Data-driven solutions built for real operational and strategic decision-making.
+            Three internship case studies plus earlier portfolio projects across analytics, BI, and warehousing.
           </p>
         </div>
 

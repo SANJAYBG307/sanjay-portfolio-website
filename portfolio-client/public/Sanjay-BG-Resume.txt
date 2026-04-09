@@ -5,7 +5,7 @@ Mobile No: +91 7353929664
 LinkedIn: www.linkedin.com/in/sanjay-b-g-960181340
 
 PROFESSIONAL SUMMARY
-Data Analyst with experience in SQL, Python, Power BI, and Tableau, specializing in transforming operational datasets into actionable business insights. Skilled in data cleaning, ETL pipeline development, exploratory data analysis, and dashboard creation to support data-driven decision making. Experience analyzing logistics and operational datasets to identify trends, optimize routes, and improve revenue visibility.
+Data Analyst with experience in SQL, Python, Power BI, and Tableau, specializing in transforming GC, GDM, and THP datasets into actionable business insights. Skilled in data cleaning, ETL pipeline development, exploratory data analysis, and dashboard creation to support data-driven decision making. Experience analyzing revenue, transport operations, and vendor cash flow to identify concentration, cost, and payment-risk patterns.
 
 TECHNICAL SKILLS
 Programming: Python (Pandas, NumPy)
@@ -28,24 +28,23 @@ Jul 2025 - Jan 2026
 - Used Git/GitHub in a Linux environment for version control and collaboration.
 
 PROJECTS
-Logistics Data Warehouse & Analytics Platform
-Tools: SQL, ETL, Tableau
-- Designed a star schema data warehouse to convert raw shipment data into structured analytics tables.
-- Built ETL workflows to extract and transform logistics datasets for reporting.
-- Developed Tableau dashboards analyzing route profitability, truck utilization, and revenue performance.
+Revenue & Customer Intelligence Business Understanding
+Tools: SQL, MySQL, KPI Reporting
+- Built a reporting layer on GC to analyze freight revenue, customer concentration, route demand, delivery success, and payment mix.
+- Measured total revenue of 2,170,895 across 250 consignments and 89 customers.
+- Identified heavy dependence on TBB and TO PAY bookings and highlighted delivery status capture issues.
 
-Freight Transportation SQL Analytics
-Tools: MySQL, SQL
-- Built a relational database to analyze shipments, dispatch operations, and vendor payments.
-- Developed SQL queries and transformation views to analyze customer contribution and operational cost patterns.
-- Performed exploratory analysis identifying opportunities for revenue optimization and logistics efficiency improvements.
+Operations & Profitability Optimization Business Understanding
+Tools: SQL, MySQL, Operations Analytics
+- Structured GDM dispatch data to measure transport cost, truck usage, route efficiency, and transit time.
+- Calculated total transport cost of 3,858,332, average cost per KG of 2.1797, and average transit time of 4.9036 days.
+- Linked GC revenue data to review directional route profitability and identify high-cost lanes.
 
-Electric Vehicle Market Analysis Dashboard
-Tools: Power BI, Power Query, DAX
-- Developed a Power BI dashboard analyzing EV adoption trends across states and manufacturers.
-- Cleaned and transformed datasets using Power Query.
-- Built DAX measures for metrics such as total vehicles, average electric range, and BEV vs PHEV distribution.
-- Designed interactive visualizations including maps, bar charts, and trend lines for policy and market insights.
+Vendor & Cash Flow Management Business Understanding
+Tools: SQL, MySQL, Finance Analytics
+- Evaluated THP payment records to understand vendor spend concentration, outstanding payables, and payment timing.
+- Measured total vendor spend of 4,328,166 and total outstanding payables of 2,044,868.
+- Reviewed monthly hire spikes and validated zero TDS and penalty values for data-quality checks.
 
 EDUCATION
 Bachelor of Engineering (EEE)

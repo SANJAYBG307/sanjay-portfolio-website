@@ -5,8 +5,8 @@
   "headline": "Data Analyst Turning Operational Data into Business Decisions",
   "subheadline": "I work with SQL, Python, Power BI, and Tableau to clean complex data, uncover trends, and build dashboards that drive measurable action.",
   "intro": "I'm Sanjay B G, a Data Analyst with hands-on experience in logistics and business analytics. I specialize in converting raw data into clear insights through ETL, exploratory analysis, KPI tracking, and data storytelling.",
-  "summary": "I am a Data Analyst focused on solving real business problems using data. During my experience at Manoj Cargo Carriers, I worked on shipment booking, dispatch, and vendor payment datasets to identify route-level revenue patterns and operational gaps. My core strength is end-to-end analytics: from data cleaning and transformation to dashboard development and insight communication. I have worked with SQL (MySQL), Python (Pandas), Excel, Power BI, and Tableau to build analytics workflows that help teams make better decisions.",
-  "about": "I am a Data Analyst focused on solving real business problems using data. During my experience at Manoj Cargo Carriers, I worked on shipment booking, dispatch, and vendor payment datasets to identify route-level revenue patterns and operational gaps.\n\nMy core strength is end-to-end analytics: from data cleaning and transformation to dashboard development and insight communication. I have worked with SQL (MySQL), Python (Pandas), Excel, Power BI, and Tableau to build analytics workflows that help teams make better decisions.\n\nI also collaborated with engineering teams during a Django monolith-to-microservices migration, supporting dataset validation and data consistency across services. This gave me strong cross-functional exposure to both analytics and product environments.",
+  "summary": "I am a Data Analyst focused on solving real business problems using data. During my experience at Manoj Cargo Carriers, I worked on GC, GDM, and THP datasets to understand freight revenue, route profitability, vendor spend, and cash-flow pressure. My core strength is end-to-end analytics: from data cleaning and transformation to dashboard development and insight communication. I have worked with SQL (MySQL), Python (Pandas), Excel, Power BI, and Tableau to build analytics workflows that help teams make better decisions.",
+  "about": "I am a Data Analyst focused on solving real business problems using data. During my experience at Manoj Cargo Carriers, I worked on GC, GDM, and THP datasets to understand freight revenue, route profitability, vendor spend, and cash-flow pressure.\n\nMy core strength is end-to-end analytics: from data cleaning and transformation to dashboard development and insight communication. I have worked with SQL (MySQL), Python (Pandas), Excel, Power BI, and Tableau to build analytics workflows that help teams make better decisions.\n\nI also collaborated with engineering teams during a Django monolith-to-microservices migration, supporting dataset validation and data consistency across services. This gave me strong cross-functional exposure to both analytics and product environments.",
   "whatIBring": [
     "Strong SQL-driven analysis for operational and business data",
     "Clean, reliable datasets through ETL and validation",
@@ -60,10 +60,10 @@
     "role": "Graduate Trainee Engineer – Data Analytics & Operations",
     "duration": "Jul 2025 – Jan 2026",
     "highlights": [
-      "Analyzed 10,000+ shipment, dispatch, and vendor payment records using SQL (MySQL) to identify route-level revenue trends and performance gaps.",
-      "Cleaned and transformed multi-source operational datasets using Pandas and Excel, improving data reliability for delivery and profitability analysis.",
-      "Developed interactive Power BI and Tableau dashboards tracking booking volume, revenue trends, and customer contribution, reducing manual reporting effort.",
-      "Performed exploratory data analysis across 50+ transportation routes to identify high- and low-performing lanes, supporting operational planning decisions.",
+      "Analyzed GC, GDM, and THP records using SQL (MySQL) to measure revenue concentration, route profitability, vendor exposure, and payment-cycle risk.",
+      "Cleaned and transformed multi-source operational datasets using Pandas and Excel, improving data reliability for revenue, delivery, and cash-flow analysis.",
+      "Developed reporting views and dashboards tracking booking volume, transport cost, customer contribution, and vendor spend, reducing manual reporting effort.",
+      "Identified high-value customers, high-cost routes, and concentrated vendor spend to support commercial and operational planning decisions.",
       "Supported data validation during migration from a Django monolith to microservices, ensuring data consistency across multiple services."
     ]
   }

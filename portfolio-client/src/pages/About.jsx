@@ -4,9 +4,9 @@ function About() {
       <section>
         <div className="section-head reveal-on-scroll">
           <span className="section-kicker">About</span>
-          <h1 className="section-title">Data Analyst focused on solving business problems</h1>
+          <h1 className="section-title">Data Analyst focused on revenue, operations, and cash flow</h1>
           <p className="section-subtitle">
-            I analyze operational data to deliver clear insights and practical business decisions.
+            I analyze transport and finance data to deliver clear insights and practical business decisions.
           </p>
         </div>
 
@@ -15,7 +15,7 @@ function About() {
             <article className="about-panel surface-card reveal-on-scroll">
               <h2 className="skill-section-title">My Story</h2>
               <p>
-                I am a Data Analyst with hands-on experience in logistics analytics. At Manoj Cargo Carriers, I worked with shipment, dispatch, and vendor datasets to uncover route-level performance patterns.
+                I am a Data Analyst with hands-on experience in logistics, revenue, and vendor analytics. At Manoj Cargo Carriers, I worked with GC, GDM, and THP datasets to uncover customer concentration, route profitability, and cash-flow patterns.
               </p>
 
               <p>
@@ -26,7 +26,7 @@ function About() {
             <section className="surface-card about-panel reveal-on-scroll">
               <h2 className="skill-section-title">What I Bring</h2>
               <ul className="about-list">
-                <li>Strong SQL-driven analysis for operational and business data</li>
+                <li>Strong SQL-driven analysis for operational, revenue, and finance data</li>
                 <li>Clean, reliable datasets through ETL and validation</li>
                 <li>Dashboarding and KPI reporting for leadership visibility</li>
               </ul>
@@ -40,13 +40,13 @@ function About() {
               <p className="timeline-meta">Manoj Cargo Carriers | Jul 2025 - Jan 2026 (6 Months)</p>
               <ul className="about-list">
                 <li>
-                  Built and optimized logistics datasets using SQL, Pandas, and Excel, improving data reliability and enabling faster reporting workflows.
+                  Built and optimized GC, GDM, and THP reporting views using SQL, Pandas, and Excel, improving data reliability and enabling faster reporting workflows.
                 </li>
                 <li>
-                  Developed KPI frameworks (revenue, cost/kg, delays, utilization, vendor metrics), uncovering 89.35% revenue concentration and 37.5% outstanding exposure for strategic decision-making.
+                  Developed KPI frameworks for revenue, cost/kg, delays, utilization, and vendor metrics, uncovering 2.17M freight revenue, 3.86M transport cost, and 2.04M outstanding exposure.
                 </li>
                 <li>
-                  Analyzed 50+ transportation routes to identify high-profit (Bangalore-Daman) and loss-making (Bangalore-Chennai) lanes, enabling cost optimization opportunities.
+                  Analyzed booking, dispatch, and vendor patterns to identify high-volume routes, costly lanes, and spend concentration, enabling cost optimization opportunities.
                 </li>
                 <li>
                   Designed analytics-ready datasets powering Power BI and Tableau dashboards for revenue, bookings, profitability, and vendor risk tracking.

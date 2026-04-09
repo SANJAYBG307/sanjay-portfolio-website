@@ -1,6 +1,150 @@
 [
   {
     "id": 1,
+    "title": "Revenue & Customer Intelligence Business Understanding",
+    "tools": ["SQL", "MySQL", "KPI Reporting", "Business Analysis"],
+    "summary": "Built a reporting layer on GC to track freight revenue, customer concentration, route demand, delivery success, and payment mix.",
+    "description": "Analyzed GC transaction data to turn bookings, customer activity, route movement, delivery status, and payment terms into a clean business reporting view for management, sales, operations, and BI users.",
+    "highlights": [
+      "Measured total freight revenue of 2,170,895 across 250 consignments and 89 customers.",
+      "Identified heavy concentration in TBB and TO PAY bookings, which together account for most revenue.",
+      "Top customers and routes dominate the business, while delivery status capture needs validation for SLA reporting."
+    ],
+    "readme": {
+      "overview": "This project turns GC transaction data into a reliable reporting layer for revenue, customer, route, delivery, and payment analysis. The goal is to help management and analysts understand what drives freight revenue, which customers and routes contribute the most volume, and where payment or delivery risk may exist.",
+      "problem": "GC contains the core revenue and customer activity records, but it is not arranged for fast and consistent analysis. Business users need a dependable view that explains how freight revenue is generated, how concentrated customer demand is, how routes perform, and how payment terms affect cash collection risk.",
+      "approach": "Structured the analysis around revenue, customer, route, delivery, and payment dimensions. Calculated KPIs for total revenue, consignments, customers, average freight per consignment, and payment split. Reviewed delivery capture and route concentration to highlight data-quality gaps and operational patterns.",
+      "businessMetrics": [
+        { "label": "Total Revenue", "value": "2,170,895" },
+        { "label": "Total Consignments", "value": "250" },
+        { "label": "Total Customers", "value": "89" },
+        { "label": "Average Freight per Consignment", "value": "8,683.58" }
+      ],
+      "topPerformers": [
+        {
+          "category": "Top Customers",
+          "items": [
+            "SUDARSHAN CHEMPRO P LTD - 690,353",
+            "INFINITI RETAIL LIMITED-HYD - 539,460",
+            "SUDARSHAN PINE PRODUCTS PVT LTD-BNG - 265,437"
+          ]
+        },
+        {
+          "category": "Top Routes",
+          "items": [
+            "BANGALORE -> BHIWANDI - 98 bookings",
+            "HYDERABAD -> VIJAYAWADA - 67 bookings",
+            "BANGALORE -> CHENNAI - 31 bookings"
+          ]
+        }
+      ],
+      "salesTrend": [
+        "TBB and TO PAY together drive 241 of 250 consignments, showing heavy credit dependence.",
+        "BANGALORE -> BHIWANDI and HYDERABAD -> VIJAYAWADA account for the largest booking demand.",
+        "Only 3 bookings are marked loaded = 'Y', so delivery capture is not reliable enough for SLA reporting."
+      ],
+      "bottomLine": "Revenue is highly concentrated in a few customers and routes, while delivery tracking and payment mix both need tighter control before the reporting layer is used for executive dashboards.",
+      "technologiesUsed": ["SQL", "MySQL", "Business Reporting", "KPI Analysis", "Customer Analytics", "Route Analysis"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Operations & Profitability Optimization Business Understanding",
+    "tools": ["SQL", "MySQL", "Operations Analytics", "Cost Analysis"],
+    "summary": "Analyzed GDM dispatch data to measure transport cost, load utilization, transit time, and route profitability.",
+    "description": "Structured GDM operational records to understand dispatch cost, fleet usage, movement duration, and route efficiency, then linked GC revenue data where needed to estimate route profitability.",
+    "highlights": [
+      "Calculated total transport cost of 3,858,332 across 250 trips with an average transit time of 4.9036 days.",
+      "Reviewed route profitability and found both profitable and loss-making lanes after joining GC and GDM data.",
+      "A small truck group handled most trips, and the highest-cost routes need review for cost control."
+    ],
+    "readme": {
+      "overview": "This project turns GDM dispatch records into an operational reporting layer for transport cost, transit time, truck usage, and load efficiency. The goal is to identify where transport spend is highest, which routes are delayed, and how effectively fleet capacity is being used.",
+      "problem": "GDM records dispatch costs, movement times, truck usage, and load characteristics, but the data needs to be structured into a usable reporting layer. Operations leaders need to know where transport cost is highest, which routes are delayed, and how effectively fleet capacity is being used.",
+      "approach": "Analyzed dispatch records across route, truck, weight, hire expense, and transit duration fields. Calculated cost and utilization KPIs, then linked GC revenue data by route mapping to understand directional profitability and identify cost-heavy lanes.",
+      "businessMetrics": [
+        { "label": "Total Transport Cost", "value": "3,858,332" },
+        { "label": "Average Cost per KG", "value": "2.1797" },
+        { "label": "Average Transit Time", "value": "4.9036 days" },
+        { "label": "Total Trips", "value": "250" }
+      ],
+      "topPerformers": [
+        {
+          "category": "Top Trucks",
+          "items": [
+            "KA-55-4928 - 23 trips",
+            "KA-01-AE-1642 - 13 trips",
+            "KA-01-0922 - 10 trips"
+          ]
+        },
+        {
+          "category": "Highest Cost Routes",
+          "items": [
+            "BANGALORE -> BHIWANDI - 723,206",
+            "BANGALORE -> CHENNAI - 630,481",
+            "BANGALORE -> COCHIN - 284,707"
+          ]
+        }
+      ],
+      "salesTrend": [
+        "Bangalore-Bhiwandi and Bangalore-Chennai create the highest cost exposure.",
+        "Several long-haul routes exceed 20 average transit days and should be reviewed for delay causes.",
+        "Directional profitability varies sharply after the GC-GDM join, so route margin should be interpreted by lane direction."
+      ],
+      "bottomLine": "Transport spend is concentrated in a few routes and trucks, so the biggest savings opportunity is tighter lane-level cost control and better fleet balancing.",
+      "technologiesUsed": ["SQL", "MySQL", "Operations Reporting", "Cost Analysis", "Fleet Utilization", "Route Profitability"]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Vendor & Cash Flow Management Business Understanding",
+    "tools": ["SQL", "MySQL", "Finance Analytics", "Cash Flow"],
+    "summary": "Measured vendor spend, outstanding payables, payment timing, and penalties from THP records.",
+    "description": "Evaluated THP payment records to understand vendor spend concentration, unpaid balances, payment timing, tax deduction behavior, and possible data-quality issues in penalty capture.",
+    "highlights": [
+      "Total vendor spend reached 4,328,166, while outstanding payables stood at 2,044,868.",
+      "Vendor 20033 dominates spend concentration and should be prioritized in payment planning.",
+      "Zero TDS and penalty values, plus a very long average payment cycle, indicate a likely data-capture gap that should be validated."
+    ],
+    "readme": {
+      "overview": "This project turns THP payment records into a financial reporting layer for vendor spend, outstanding balances, payment timing, and delay-related controls. The goal is to help finance teams monitor cash flow pressure and understand where spend is concentrated.",
+      "problem": "THP payment records capture vendor hire amounts, outstanding balances, and payment timing, but the data needs a clean business view to support cash flow monitoring. Finance teams need to know which vendors drive spend, how much remains unpaid, and whether the payment cycle is creating liquidity pressure.",
+      "approach": "Analyzed vendor identifiers, order dates, payable and balance amounts, hire amount, TDS, and delay penalty values. Measured vendor concentration, outstanding liabilities, payment-cycle timing, and monthly hire amount movement to highlight spend patterns and control gaps.",
+      "businessMetrics": [
+        { "label": "Total Vendor Spend", "value": "4,328,166" },
+        { "label": "Total Outstanding Payables", "value": "2,044,868" },
+        { "label": "Average Payment Cycle (Days)", "value": "1,310.3240" },
+        { "label": "Average Hire Rate per KG", "value": "2.698560" }
+      ],
+      "topPerformers": [
+        {
+          "category": "Top Vendors",
+          "items": [
+            "20033 - 2,112,500",
+            "20037 - 306,000",
+            "20066 - 279,000"
+          ]
+        },
+        {
+          "category": "Monthly Hire Spikes",
+          "items": [
+            "2023-04 - 72,000.0000",
+            "2022-12 - 34,000.0000",
+            "2024-06 - 30,598.0000"
+          ]
+        }
+      ],
+      "salesTrend": [
+        "Vendor 20033 dominates total spend and should be prioritized in payment planning.",
+        "Hire amounts spike sharply in 2022-12, 2023-04, and 2024-06, suggesting irregular spending patterns.",
+        "Zero TDS and penalty values across vendors indicate either clean settlements or a data capture gap that should be checked."
+      ],
+      "bottomLine": "Vendor spend is concentrated, outstanding payables are high, and payment-cycle data needs validation before it can support tighter cash-flow governance.",
+      "technologiesUsed": ["SQL", "MySQL", "Vendor Analytics", "Cash Flow Analysis", "Payables Reporting", "Finance Reporting"]
+    }
+  },
+  {
+    "id": 4,
     "title": "Northwind Sales Data Warehouse & Analytics",
     "tools": ["SQL", "MySQL", "ETL", "Dimensional Modeling"],
     "summary": "Transformed raw Northwind transactional data into an analytics-ready star schema warehouse using SQL ETL pipelines for KPI reporting and business insights.",
@@ -85,7 +229,7 @@
     }
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "Netflix Content Analytics & SQL Insights",
     "tools": ["SQL", "MySQL 8", "CSV", "Data Quality"],
     "summary": "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
@@ -112,7 +256,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 6,
     "title": "Electric Vehicle Adoption Analytics Dashboard",
     "tools": ["Power BI", "Power Query", "DAX"],
     "summary": "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",

@@ -125,7 +125,7 @@ function ProjectDetails() {
 
             {project.readme?.salesTrend && project.readme.salesTrend.length > 0 && (
               <section className="readme-section">
-                <h2 className="readme-heading">📈 Sales Trend Over Time</h2>
+                <h2 className="readme-heading">📈 Key Patterns & Trends</h2>
                 <ul className="readme-list">
                   {project.readme.salesTrend.slice(0, MAX_TREND_POINTS).map((trendPoint) => (
                     <li key={trendPoint} className="readme-list-item">
