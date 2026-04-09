@@ -146,85 +146,71 @@
   {
     "id": 4,
     "title": "Northwind Sales Data Warehouse & Analytics",
-    "tools": ["SQL", "MySQL", "ETL", "Dimensional Modeling"],
-    "summary": "Transformed raw Northwind transactional data into an analytics-ready star schema warehouse using SQL ETL pipelines for KPI reporting and business insights.",
-    "description": "Built a dimensional data warehouse on Northwind using SQL and MySQL. Implemented extraction, cleaning, standardization, and loading pipelines to populate fact and dimension tables, then developed KPI and business analysis queries for products, customers, employees, shipping, and sales trends.",
+    "tools": ["SQL", "MySQL", "ETL", "Dimensional Modeling", "Data Warehousing"],
+    "summary": "Northwind warehouse results show strong performance with clear concentration: a small set of products, customers, employees, and shipping partners drive most revenue.",
+    "description": "Analyzed Northwind warehouse outputs to evaluate KPI performance, contributor concentration, and trend behavior. Findings show healthy revenue and order values, but meaningful dependency on top performers across products, accounts, employees, and carriers.",
     "highlights": [
-      "Implemented a star schema with fact_sales and dimensions for customers, products, orders, and date.",
-      "Developed SQL ETL workflows to extract, clean, standardize, and load transactional data into the warehouse.",
-      "Computed core business KPIs: total orders, products sold, revenue, average order value, and shipment count."
+      "Total revenue reached 1,265,792.93 with 830 orders and average order value of 1,525.05.",
+      "Cote de Blaye, top customers, and key sales employees account for a large share of commercial performance.",
+      "Monthly revenue strengthened through 1996, with May 1996 at 129,247.26 and June treated as partial data."
     ],
     "readme": {
-      "overview": "This project transforms raw transactional Northwind data into a structured, analytics-ready data warehouse using dimensional modeling and SQL-based ETL pipelines. The solution is designed for efficient reporting, business insight generation, and data-driven decision-making.",
-      "problem": "The source Northwind OLTP model is highly normalized and optimized for transactions, not analytics. Business reporting required repeated complex joins, inconsistent calculations, and manual metric preparation, making decision-making slow and difficult to scale.",
-      "approach": "Implemented a star schema with fact_sales and dimensions dim_customers, dim_products, dim_orders, and dim_date. Built SQL ETL pipelines to extract source data, clean inconsistencies, handle null values, standardize formats, and load warehouse tables while preserving data integrity and consistency.",
+      "overview": "Executive summary: Northwind warehouse analysis shows clear sales concentration patterns. Overall performance is solid, with total revenue above 1.26 million and average order value above 1.5 thousand.",
+      "problem": "The business needed a reader-friendly executive view of KPI health and concentration risk across products, customers, employees, and shipping. Leadership also needed confidence in trend interpretation where final-month data may be incomplete.",
+      "approach": "Used the dimensional warehouse outputs to compute KPI snapshot metrics, rank contributors, and assess trend behavior over time. Findings were organized into product, customer, employee, shipping, and monthly growth insights for executive consumption.",
       "businessMetrics": [
         { "label": "Total Orders", "value": "830" },
         { "label": "Total Products Sold", "value": "51,317 units" },
-        { "label": "Total Revenue", "value": "$1,265,792.93" },
-        { "label": "Average Order Value", "value": "$1,525.05" },
-        { "label": "Total Shipments", "value": "2,155 shipment lines" }
+        { "label": "Total Revenue", "value": "1,265,792.93" },
+        { "label": "Average Order Value", "value": "1,525.05" },
+        { "label": "Shipment Count", "value": "2,155 order lines" }
       ],
       "topPerformers": [
         {
-          "category": "Best Selling Products",
+          "category": "Product Performance",
           "items": [
-            "Cote de Blaye (Beverage) - $141,396.73",
-            "Thuringer Rostbratwurst (Meat) - $80,368.69",
-            "Raclette Courdavault (Dairy) - $71,155.70",
-            "Tarte au sucre (Confections) - $47,234.97",
-            "Camembert Pierrot (Dairy) - $46,825.48"
+            "Cote de Blaye - 141,396.73",
+            "Thuringer Rostbratwurst - 80,368.69",
+            "Raclette Courdavault - 71,155.70",
+            "Tarte au sucre - 47,234.97",
+            "Camembert Pierrot - 46,825.48"
           ]
         },
         {
-          "category": "Best Customers",
+          "category": "Customer Activity",
           "items": [
-            "Save-a-lot Markets (USA) - 31 orders, $104,361.94",
-            "Ernst Handel (Austria) - 30 orders, $104,874.97",
-            "QUICK-Stop (Germany) - 28 orders, $110,277.30",
-            "Hungry Owl All-Night Grocers (Ireland) - 19 orders, $49,979.91",
-            "Folk och fa HB (Sweden) - 19 orders, $29,567.56"
+            "Save-a-lot Markets - 31 orders, 104,361.94",
+            "QUICK-Stop - high-value customer profile",
+            "Ernst Handel - high-value customer profile",
+            "Account value is more important than order count alone"
           ]
         },
         {
-          "category": "Top Performing Employees",
+          "category": "Employee Performance",
           "items": [
-            "Margaret Peacock (Sales Rep) - 156 orders, $232,890.85",
-            "Janet Leverling (Sales Rep) - 127 orders, $202,812.84",
-            "Nancy Davolio (Sales Rep) - 123 orders, $192,107.56",
-            "Andrew Fuller (VP Sales) - 96 orders, $166,537.75",
-            "Laura Callahan (Sales Coordinator) - 104 orders, $126,862.28"
+            "Margaret Peacock - 156 orders, 232,890.85",
+            "Janet Leverling - strong revenue contribution",
+            "Nancy Davolio - strong revenue contribution",
+            "Performance gap indicates uneven sales distribution"
           ]
         },
         {
-          "category": "Shipping Companies",
+          "category": "Shipping Performance",
           "items": [
-            "United Package - 326 orders, $533,547.60",
-            "Federal Shipping - 255 orders, $383,405.43",
-            "Speedy Express - 249 orders, $348,839.90"
+            "United Package - 326 orders, 533,547.60 shipped revenue",
+            "Federal Shipping - major supporting carrier",
+            "Speedy Express - major supporting carrier",
+            "Shipment volume and revenue move closely together"
           ]
         }
       ],
       "salesTrend": [
-        "Started in Aug 1994 with about 22-26 orders per month",
-        "Grew steadily through 1995 with roughly 30-37 orders per month",
-        "Peak growth arrived in early 1996 with 48-77 orders per month",
-        "By May 1996, monthly volume reached 77 orders, about 3x Aug 1994"
+        "Sales strength increased from early 1994 into much stronger monthly performance in 1996.",
+        "Monthly revenue crossed 100,000 in multiple 1996 months, peaking at 129,247.26 in May 1996.",
+        "June 1996 should be treated as incomplete month data, not a confirmed decline."
       ],
-      "bottomLine": "The business is growing strongly, Margaret Peacock is the top salesperson, Cote de Blaye is the best product, and United Package is the most-used shipper.",
-      "keyInsights": [
-        "Total Orders: 830",
-        "Total Products Sold: 51,317 units",
-        "Total Revenue: $1,265,792.93",
-        "Average Order Value (AOV): $1,525.05",
-        "Total Shipments: 2,155 shipment lines",
-        "Best-selling product: Cote de Blaye with $141,396.73 revenue",
-        "Top customer by value: QUICK-Stop with $110,277.30 revenue",
-        "Top-performing employee: Margaret Peacock with 156 orders and $232,890.85 revenue",
-        "Most-used shipper: United Package with 326 orders",
-        "Sales trend: Monthly orders grew from about 22-26 in Aug 1994 to 77 by May 1996"
-      ],
-      "impact": "Created a scalable analytics layer that enables fast KPI reporting and business-performance analysis across products, customers, employees, and shipping operations. The warehouse design supports easier BI integration, reusable analytics queries, and future enhancements like incremental loads and ETL automation.",
+      "bottomLine": "Northwind is performing well, but business contribution is not evenly balanced. A narrow set of top performers drives most revenue, so growth strategy should protect key contributors while reducing concentration risk.",
+      "impact": "Sales leadership can prioritize top accounts and product categories, operations can maintain strength in core carriers while balancing service coverage, and reporting can standardize trend comparisons using complete-month logic.",
       "technologiesUsed": ["MySQL", "SQL", "ETL (Extract, Transform, Load)", "Star Schema", "Dimensional Modeling", "Data Warehousing"]
     }
   },
@@ -232,26 +218,73 @@
     "id": 5,
     "title": "Netflix Content Analytics & SQL Insights",
     "tools": ["SQL", "MySQL 8", "CSV", "Data Quality"],
-    "summary": "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
-    "description": "Developed a comprehensive analytics pipeline for Netflix content data, including data quality checks for completeness and consistency. Analyzed catalog trends by content type, ratings, yearly growth, and seasonality, using advanced SQL techniques like CTEs and window functions for country-level, genre-level, and key talent analysis.",
+    "summary": "Cleaned 26,421 raw rows down to 8,807 deduplicated titles and produced KPI-ready EDA from netflix_clean_final.",
+    "description": "Executed full Netflix SQL workflow from table creation to EDA on netflix_clean_final. Findings cover data quality outcomes, catalog mix, rating distribution, growth slowdown after peak year, country/genre concentration risk, and stakeholder recommendations.",
     "highlights": [
-      "Built a MySQL pipeline to ingest and clean 8,800+ Netflix titles using SQL transformations and views.",
-      "Executed data quality checks for completeness, consistency, and accuracy before analysis.",
-      "Analyzed catalog trends by content type, ratings, yearly growth, and seasonality of content additions.",
-      "Used CTEs and window functions for country-level, genre-level, and key talent analysis."
+      "Deduplication removed 17,614 duplicate rows and finalized 8,807 clean records for analysis.",
+      "Movies represent 69.62% of catalog while TV Shows account for 30.38%.",
+      "Top-5 country share is 58.34% (medium concentration risk) and top-5 genre share is 17.95% (low risk)."
     ],
     "readme": {
-      "overview": "A data quality and content analytics platform for Netflix's global catalog. This project showcases data cleaning, exploratory analysis, and advanced SQL techniques across 8,800+ titles spanning multiple countries and genres.",
-      "problem": "Raw Netflix dataset contained missing values, inconsistent formats, and data quality issues. Required systematic validation before trustworthy analysis. Understanding content distribution and trends across regions and genres needed efficient SQL queries on large volumes.",
-      "approach": "Ingested CSV data into MySQL with appropriate data types and constraints. Built validation queries to identify nulls, duplicates, and outliers. Used CTEs for complex transformations and window functions for ranking and trend analysis. Created normalized views for downstream analytics.",
-      "keyInsights": [
-        "TV Shows dominate (65%) over Movies (35%) in catalog - strategic content mix",
-        "Median release year is 2019, indicating 5+ year old catalog with historical content",
-        "India, UK, and Canada lead in content diversity with 15%+ of catalog each",
-        "TV-MA and TV-14 ratings comprise 60% of offerings, targeting mature audiences",
-        "Content additions peaked in 2019-2020 with slowdown post-2021"
+      "overview": "Simple EDA report based on cleaned view netflix_clean_final in netflix_db. All KPI answers are derived from the cleaned analytical layer, not the raw table.",
+      "problem": "Raw data included missing fields, standardization issues, and heavy duplication, which reduced trust in downstream EDA. Stakeholders needed clean KPI answers for content mix, rating dominance, growth trend, and concentration risk.",
+      "approach": "Ran SQL scripts in sequence: 01_create_tables.sql, 02_load_data.sql, 03_data_exploration.sql, 04_cleaning_views.sql, and 05_eda_queries.sql. Enabled local_infile for LOAD DATA LOCAL INFILE, then validated post-cleaning quality checks and concentration metrics.",
+      "businessMetrics": [
+        { "label": "Final Cleaned Rows", "value": "8,807" },
+        { "label": "Duplicates Removed", "value": "17,614" },
+        { "label": "Movie Share", "value": "69.62%" },
+        { "label": "TV Show Share", "value": "30.38%" },
+        { "label": "Peak Additions Year", "value": "2019 (2,016 titles)" }
       ],
-      "impact": "Identified 200+ records with data quality issues for correction. Established data quality framework for ongoing ingestion. Provided structured insights into content strategy and geographic distribution. Enabled data-driven decisions on content acquisition.",
+      "topPerformers": [
+        {
+          "category": "Top Ratings",
+          "items": [
+            "TV-MA - 3,207 titles (36.41%)",
+            "TV-14 - 2,160 titles (24.53%)",
+            "TV-PG - 863 titles (9.80%)",
+            "R - 799 titles (9.07%)",
+            "PG-13 - 490 titles (5.56%)"
+          ]
+        },
+        {
+          "category": "Top Countries",
+          "items": [
+            "United States - 2,818",
+            "India - 972",
+            "United Kingdom - 419",
+            "Japan - 245",
+            "South Korea - 199"
+          ]
+        },
+        {
+          "category": "Top Genre Combinations",
+          "items": [
+            "Dramas, International Movies - 362",
+            "Documentaries - 359",
+            "Stand-Up Comedy - 334",
+            "Comedies, Dramas, International Movies - 274",
+            "Dramas, Independent Movies, International Movies - 252"
+          ]
+        },
+        {
+          "category": "Quality Checks",
+          "items": [
+            "Missing director set to Unknown - 2,634",
+            "Missing cast set to Unknown - 825",
+            "Missing country set to Unknown - 831",
+            "Not Rated defaults - 90",
+            "Movie duration outliers flagged - 173"
+          ]
+        }
+      ],
+      "salesTrend": [
+        "Catalog additions grew strongly up to peak year 2019, then slowed in 2020 and 2021.",
+        "2021 additions were 1,498 titles, a YoY drop of 381 vs 2020.",
+        "Country concentration risk is medium (58.34%) while genre concentration risk is low (17.95%)."
+      ],
+      "bottomLine": "The cleaned view delivers reliable catalog intelligence, but this is metadata-only analysis and does not include watch-time, engagement, or revenue behavior.",
+      "impact": "Recommendations delivered for content strategy, acquisition, marketing, and analytics operations: keep movie strength while scaling selective TV investment, monitor country concentration quarterly, maintain metadata validation checks, and retain outlier monitoring during recurring loads.",
       "technologiesUsed": ["MySQL 8.0", "CTEs (Common Table Expressions)", "Window Functions (ROW_NUMBER, RANK, DENSE_RANK)", "Data Validation Queries", "Exploratory Data Analysis", "String Functions and Date Manipulation"]
     }
   },
@@ -259,26 +292,69 @@
     "id": 6,
     "title": "Electric Vehicle Adoption Analytics Dashboard",
     "tools": ["Power BI", "Power Query", "DAX"],
-    "summary": "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",
-    "description": "Created a comprehensive Power BI dashboard analyzing electric vehicle adoption patterns, including data cleaning and transformation with Power Query. Developed DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution, with interactive map and trend visualizations to highlight market and policy-driven insights.",
+    "summary": "EV market analysis shows rapid post-2020 scaling, clear BEV dominance, and strong concentration around Tesla and regional adoption hubs.",
+    "description": "Built a Power BI dashboard and analytical narrative for EV market composition, growth trajectory, geography, manufacturer concentration, model preference, and CAFV eligibility quality. Insights highlight both momentum and concentration risk.",
     "highlights": [
-      "Built an interactive Power BI dashboard to analyze EV adoption trends across states and manufacturers.",
-      "Used Power Query to clean and model raw data for reliable reporting.",
-      "Created DAX measures for total vehicles, average electric range, and BEV vs PHEV distribution.",
-      "Designed map and trend visuals to highlight market and policy-driven insights."
+      "Total EV vehicles reached 150,440 with BEV share at 77.62% and PHEV share at 22.38%.",
+      "Tesla leads with 68,963 vehicles (~46% of market), far ahead of the next manufacturers.",
+      "Growth accelerates strongly after 2020, with 2023 as highest year and 2024 treated as partial."
     ],
     "readme": {
-      "overview": "An interactive Power BI analytics dashboard tracking electric vehicle adoption trends across the United States. This project demonstrates end-to-end BI implementation including data modeling, DAX calculations, and interactive visualization design for stakeholder insights.",
-      "problem": "Raw EV registration data lacked structure and consistency. Leadership needed to understand adoption trends, geographic patterns, and manufacturer performance. Existing reports were static and unable to support drill-down exploration by region, manufacturer, or vehicle type.",
-      "approach": "Used Power Query to extract, transform, and normalize raw dataset. Built a data model with dimension tables (Geography, Manufacturers, Vehicle Models) and fact table (Registrations). Developed DAX measures for KPIs: total vehicles, adoption rate growth, average electric range, BEV vs PHEV split. Designed interactive visualizations with map, treemap, and trend line charts.",
-      "keyInsights": [
-        "California leads with 45% of all EV registrations nationally - policy-driven adoption",
-        "Tesla dominates with 55% market share; Nissan and Chevy follow at 12% and 8%",
-        "BEVs (battery) represent 65% vs PHEVs (plug-in hybrid) at 35% - consumer preference for pure electric",
-        "Average electric range improved 35% year-over-year (2019-2024) driven by technology advancement",
-        "Adoption accelerating 25% YoY - market inflection point visible in 2023 onwards"
+      "overview": "Executive summary: the EV market is in a strong scaling phase with clear BEV dominance, high manufacturer concentration, and meaningful geographic clustering. Adoption momentum is strongest post-2020.",
+      "problem": "Stakeholders needed a clear market narrative across composition, growth, geography, make/model leadership, and policy-linked eligibility. Existing reporting did not frame concentration risk and incomplete-year effects well enough for decision-making.",
+      "approach": "Used Power Query and DAX to build KPI snapshots, growth timelines, market-share rankings, and incentive-eligibility analysis. Structured findings for strategy, operations, and policy interpretation while clearly flagging partial-period and unknown-category limitations.",
+      "businessMetrics": [
+        { "label": "Total Vehicles", "value": "150,440" },
+        { "label": "Average Electric Range", "value": "67.86 miles" },
+        { "label": "BEV Vehicles", "value": "116,767 (77.62%)" },
+        { "label": "PHEV Vehicles", "value": "33,673 (22.38%)" }
       ],
-      "impact": "Enabled real-time tracking of EV market trends. Supported strategic planning for manufacturing partnerships. Dashboard accessed weekly by 15+ executives. Insights influenced supply chain and inventory decisions worth $2M+ investment.",
+      "topPerformers": [
+        {
+          "category": "Top Manufacturers",
+          "items": [
+            "Tesla - 68,963 (~46%)",
+            "Nissan - 13,496",
+            "Chevrolet - 12,024",
+            "Ford - 7,601",
+            "BMW, Kia, Toyota, Volkswagen, Volvo, Jeep follow"
+          ]
+        },
+        {
+          "category": "Top Models",
+          "items": [
+            "Tesla Model Y - 28,502",
+            "Tesla Model 3 - 27,708",
+            "Nissan Leaf - 13,186",
+            "Tesla Model S and Model X - strong presence",
+            "Chevrolet Bolt EV - popular non-Tesla model"
+          ]
+        },
+        {
+          "category": "CAFV Eligibility",
+          "items": [
+            "Eligible - 62,912",
+            "Not eligible - 17,831",
+            "Unknown - 69,697",
+            "Unknown share indicates metadata or policy-mapping gaps"
+          ]
+        },
+        {
+          "category": "Geographic Distribution",
+          "items": [
+            "Adoption is heavily concentrated in Washington State",
+            "Seattle-area counties are major EV hubs",
+            "Regional penetration is uneven, indicating expansion opportunity"
+          ]
+        }
+      ],
+      "salesTrend": [
+        "Adoption was gradual through 2018-2019, then accelerated sharply after 2020.",
+        "2021-2023 captures the strongest growth phase, with 2023 near 37K vehicles.",
+        "2024 appears lower due to partial-year data and should not be treated as structural decline."
+      ],
+      "bottomLine": "The EV market is scaling fast and BEVs are clearly leading, but concentration by manufacturer and geography remains high. This creates both momentum and dependency risk.",
+      "impact": "Actionable implications include targeting underpenetrated regions, improving incentive eligibility data clarity, sustaining BEV-focused strategy, and monitoring concentration risk while new players and infrastructure scale.",
       "technologiesUsed": ["Power BI Desktop", "Power Query (Extract, Transform, Load)", "DAX (Data Analysis Expressions)", "Data Modeling", "Interactive Visualization", "Geographical Analytics", "Trend Analysis"]
     }
   }

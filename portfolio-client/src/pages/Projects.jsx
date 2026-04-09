@@ -10,7 +10,18 @@ function Projects() {
     async function loadProjects() {
       try {
         const data = await getProjects();
-        setProjects(data);
+        const orderedProjects = [...data].sort((a, b) => {
+          const aGroup = a.id >= 4 ? 0 : 1;
+          const bGroup = b.id >= 4 ? 0 : 1;
+
+          if (aGroup !== bGroup) {
+            return aGroup - bGroup;
+          }
+
+          return a.id - b.id;
+        });
+
+        setProjects(orderedProjects);
       } finally {
         setLoading(false);
       }

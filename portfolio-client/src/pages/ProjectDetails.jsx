@@ -7,11 +7,11 @@ function ProjectDetails() {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const MAX_METRICS = 4;
-  const MAX_PERFORMER_GROUPS = 2;
-  const MAX_PERFORMERS_PER_GROUP = 3;
-  const MAX_TREND_POINTS = 3;
-  const MAX_INSIGHTS = 4;
+  const MAX_METRICS = 8;
+  const MAX_PERFORMER_GROUPS = 6;
+  const MAX_PERFORMERS_PER_GROUP = 8;
+  const MAX_TREND_POINTS = 8;
+  const MAX_INSIGHTS = 8;
   const MAX_TOOLS = 6;
 
   useEffect(() => {
