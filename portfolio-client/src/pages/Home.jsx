@@ -46,7 +46,10 @@ function Home() {
         <section className="hero-section surface-card reveal-on-scroll">
           <div className="hero-layout">
             <div className="hero-content">
-              <span className="section-kicker">Data Analyst Portfolio</span>
+              <span className="section-kicker home-kicker">
+                <span className="kicker-icon" aria-hidden="true">✦</span>
+                Data Analyst Portfolio
+              </span>
               <h1 className="hero-title">SANJAY B G</h1>
               <h2 className="hero-subtitle">{profile.headline || "Data Analyst | SQL, Python, Excel, Power BI"}</h2>
               <p className="hero-headline-note">
@@ -57,12 +60,21 @@ function Home() {
                 <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo" />
               </div>
 
-              <p className="hero-description">Focused on SQL, Python, and BI dashboards to turn GC, GDM, and THP data into clear, measurable business decisions.</p>
+              <p className="hero-description">
+                I turn operational data into executive-ready decisions with SQL analysis, KPI design, and clear BI storytelling.
+              </p>
+
+              <p className="hero-focus-line">Focused on freight revenue, route profitability, and vendor cash-flow insights.</p>
 
               <div className="hero-meta">
-                <span className="meta-pill">📍 Bengaluru, Karnataka</span>
-                <span className="meta-pill">🔗 Open to Opportunities</span>
-                <span className="meta-pill">💼 3 Internship Case Studies</span>
+                <span className="meta-pill">
+                  <span className="meta-icon" aria-hidden="true">📍</span>
+                  Based in Bengaluru, Karnataka
+                </span>
+                <span className="meta-pill">
+                  <span className="meta-icon" aria-hidden="true">🚀</span>
+                  Open to Data Analyst roles
+                </span>
               </div>
 
               <div className="hero-buttons">
@@ -81,7 +93,10 @@ function Home() {
               </div>
 
               <div className="hero-spotlight">
-                <h3>🎯 Key Achievements</h3>
+                <h3>
+                  <span className="spotlight-icon" aria-hidden="true">⚡</span>
+                  Business Impact Snapshot
+                </h3>
                 <ul>
                   <li>2.17M freight revenue analyzed from GC data</li>
                   <li>3.86M transport cost reviewed from GDM data</li>
@@ -107,9 +122,18 @@ function Home() {
               <div className="hero-side-links social-links-section">
                 <p className="social-label">Quick Connect</p>
                 <div className="social-links">
-                  <a href="mailto:Sanjaysanju143216@gmail.com" className="social-link">📧 Email</a>
-                  <a href="https://linkedin.com/in/sanjay-b-g-960181340" target="_blank" rel="noopener noreferrer" className="social-link">💼 LinkedIn</a>
-                  <a href="https://github.com/SANJAYBG307" target="_blank" rel="noopener noreferrer" className="social-link">🔗 GitHub</a>
+                  <a href="mailto:Sanjaysanju143216@gmail.com" className="social-link">
+                    <span className="social-link-icon" aria-hidden="true">✉</span>
+                    Email
+                  </a>
+                  <a href="https://linkedin.com/in/sanjay-b-g-960181340" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <span className="social-link-icon" aria-hidden="true">in</span>
+                    LinkedIn
+                  </a>
+                  <a href="https://github.com/SANJAYBG307" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <span className="social-link-icon" aria-hidden="true">GH</span>
+                    GitHub
+                  </a>
                 </div>
               </div>
             </aside>

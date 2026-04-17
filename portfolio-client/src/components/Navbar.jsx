@@ -23,6 +23,7 @@ function Navbar() {
           <span className="brand-text">
             <span className="brand-name">SANJAY B G</span>
             <span className="brand-role">Data Analyst</span>
+            <span className="brand-availability">Open to work</span>
           </span>
         </Link>
         <button 
