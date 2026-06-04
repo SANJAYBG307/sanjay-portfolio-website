@@ -42,6 +42,17 @@ function Home() {
                 Open to Work &middot; Data Analytics
               </span>
 
+              <div className="home-photo-wrap home-mobile-photo-wrap">
+                <div className="profile-photo-card home-photo-card">
+                  <img src="/profile-photo.jpeg" alt={profile.name} className="profile-photo home-profile-photo" />
+                </div>
+
+                <div className="home-photo-badge">
+                  <span aria-hidden="true">&#128205;</span>
+                  Bengaluru, Karnataka
+                </div>
+              </div>
+
               <h1 className="hero-title">Sanjay B G</h1>
 
               <p className="hero-subtitle hero-role-line">
